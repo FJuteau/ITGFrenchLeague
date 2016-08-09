@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F7EA30C1D59CCE0000A9362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA30B1D59CCE0000A9362 /* AppDelegate.swift */; };
+		0F7EA30E1D59CCE0000A9362 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA30D1D59CCE0000A9362 /* ViewController.swift */; };
+		0F7EA3111D59CCE0000A9362 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7EA30F1D59CCE0000A9362 /* Main.storyboard */; };
+		0F7EA3131D59CCE0000A9362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7EA3121D59CCE0000A9362 /* Assets.xcassets */; };
+		0F7EA3161D59CCE0000A9362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7EA3141D59CCE0000A9362 /* LaunchScreen.storyboard */; };
+		0F7EA3211D59CCE0000A9362 /* ITGFrenchLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3201D59CCE0000A9362 /* ITGFrenchLeagueTests.swift */; };
+		0F7EA32C1D59CCE0000A9362 /* ITGFrenchLeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA32B1D59CCE0000A9362 /* ITGFrenchLeagueUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F7EA31D1D59CCE0000A9362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F7EA3001D59CCDF000A9362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F7EA3071D59CCDF000A9362;
+			remoteInfo = ITGFrenchLeague;
+		};
+		0F7EA3281D59CCE0000A9362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F7EA3001D59CCDF000A9362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F7EA3071D59CCDF000A9362;
+			remoteInfo = ITGFrenchLeague;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F7EA3081D59CCDF000A9362 /* ITGFrenchLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITGFrenchLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7EA30B1D59CCE0000A9362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F7EA30D1D59CCE0000A9362 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F7EA3101D59CCE0000A9362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F7EA3121D59CCE0000A9362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F7EA3151D59CCE0000A9362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F7EA3171D59CCE0000A9362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F7EA31C1D59CCE0000A9362 /* ITGFrenchLeagueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITGFrenchLeagueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7EA3201D59CCE0000A9362 /* ITGFrenchLeagueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITGFrenchLeagueTests.swift; sourceTree = "<group>"; };
+		0F7EA3221D59CCE0000A9362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F7EA3271D59CCE0000A9362 /* ITGFrenchLeagueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITGFrenchLeagueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7EA32B1D59CCE0000A9362 /* ITGFrenchLeagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITGFrenchLeagueUITests.swift; sourceTree = "<group>"; };
+		0F7EA32D1D59CCE0000A9362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F7EA3051D59CCDF000A9362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F7EA3191D59CCE0000A9362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F7EA3241D59CCE0000A9362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F7EA2FF1D59CCDF000A9362 = {
+			isa = PBXGroup;
+			children = (
+				0F7EA30A1D59CCE0000A9362 /* ITGFrenchLeague */,
+				0F7EA31F1D59CCE0000A9362 /* ITGFrenchLeagueTests */,
+				0F7EA32A1D59CCE0000A9362 /* ITGFrenchLeagueUITests */,
+				0F7EA3091D59CCDF000A9362 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F7EA3091D59CCDF000A9362 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA3081D59CCDF000A9362 /* ITGFrenchLeague.app */,
+				0F7EA31C1D59CCE0000A9362 /* ITGFrenchLeagueTests.xctest */,
+				0F7EA3271D59CCE0000A9362 /* ITGFrenchLeagueUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F7EA30A1D59CCE0000A9362 /* ITGFrenchLeague */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA30B1D59CCE0000A9362 /* AppDelegate.swift */,
+				0F7EA30D1D59CCE0000A9362 /* ViewController.swift */,
+				0F7EA30F1D59CCE0000A9362 /* Main.storyboard */,
+				0F7EA3121D59CCE0000A9362 /* Assets.xcassets */,
+				0F7EA3141D59CCE0000A9362 /* LaunchScreen.storyboard */,
+				0F7EA3171D59CCE0000A9362 /* Info.plist */,
+			);
+			path = ITGFrenchLeague;
+			sourceTree = "<group>";
+		};
+		0F7EA31F1D59CCE0000A9362 /* ITGFrenchLeagueTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA3201D59CCE0000A9362 /* ITGFrenchLeagueTests.swift */,
+				0F7EA3221D59CCE0000A9362 /* Info.plist */,
+			);
+			path = ITGFrenchLeagueTests;
+			sourceTree = "<group>";
+		};
+		0F7EA32A1D59CCE0000A9362 /* ITGFrenchLeagueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA32B1D59CCE0000A9362 /* ITGFrenchLeagueUITests.swift */,
+				0F7EA32D1D59CCE0000A9362 /* Info.plist */,
+			);
+			path = ITGFrenchLeagueUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F7EA3071D59CCDF000A9362 /* ITGFrenchLeague */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F7EA3301D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeague" */;
+			buildPhases = (
+				0F7EA3041D59CCDF000A9362 /* Sources */,
+				0F7EA3051D59CCDF000A9362 /* Frameworks */,
+				0F7EA3061D59CCDF000A9362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ITGFrenchLeague;
+			productName = ITGFrenchLeague;
+			productReference = 0F7EA3081D59CCDF000A9362 /* ITGFrenchLeague.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F7EA31B1D59CCE0000A9362 /* ITGFrenchLeagueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F7EA3331D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeagueTests" */;
+			buildPhases = (
+				0F7EA3181D59CCE0000A9362 /* Sources */,
+				0F7EA3191D59CCE0000A9362 /* Frameworks */,
+				0F7EA31A1D59CCE0000A9362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F7EA31E1D59CCE0000A9362 /* PBXTargetDependency */,
+			);
+			name = ITGFrenchLeagueTests;
+			productName = ITGFrenchLeagueTests;
+			productReference = 0F7EA31C1D59CCE0000A9362 /* ITGFrenchLeagueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0F7EA3261D59CCE0000A9362 /* ITGFrenchLeagueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F7EA3361D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeagueUITests" */;
+			buildPhases = (
+				0F7EA3231D59CCE0000A9362 /* Sources */,
+				0F7EA3241D59CCE0000A9362 /* Frameworks */,
+				0F7EA3251D59CCE0000A9362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F7EA3291D59CCE0000A9362 /* PBXTargetDependency */,
+			);
+			name = ITGFrenchLeagueUITests;
+			productName = ITGFrenchLeagueUITests;
+			productReference = 0F7EA3271D59CCE0000A9362 /* ITGFrenchLeagueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F7EA3001D59CCDF000A9362 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Fjuteau;
+				TargetAttributes = {
+					0F7EA3071D59CCDF000A9362 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0F7EA31B1D59CCE0000A9362 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0F7EA3071D59CCDF000A9362;
+					};
+					0F7EA3261D59CCE0000A9362 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0F7EA3071D59CCDF000A9362;
+					};
+				};
+			};
+			buildConfigurationList = 0F7EA3031D59CCDF000A9362 /* Build configuration list for PBXProject "ITGFrenchLeague" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F7EA2FF1D59CCDF000A9362;
+			productRefGroup = 0F7EA3091D59CCDF000A9362 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F7EA3071D59CCDF000A9362 /* ITGFrenchLeague */,
+				0F7EA31B1D59CCE0000A9362 /* ITGFrenchLeagueTests */,
+				0F7EA3261D59CCE0000A9362 /* ITGFrenchLeagueUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F7EA3061D59CCDF000A9362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F7EA3161D59CCE0000A9362 /* LaunchScreen.storyboard in Resources */,
+				0F7EA3131D59CCE0000A9362 /* Assets.xcassets in Resources */,
+				0F7EA3111D59CCE0000A9362 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F7EA31A1D59CCE0000A9362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F7EA3251D59CCE0000A9362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F7EA3041D59CCDF000A9362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F7EA30E1D59CCE0000A9362 /* ViewController.swift in Sources */,
+				0F7EA30C1D59CCE0000A9362 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F7EA3181D59CCE0000A9362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F7EA3211D59CCE0000A9362 /* ITGFrenchLeagueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F7EA3231D59CCE0000A9362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F7EA32C1D59CCE0000A9362 /* ITGFrenchLeagueUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F7EA31E1D59CCE0000A9362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F7EA3071D59CCDF000A9362 /* ITGFrenchLeague */;
+			targetProxy = 0F7EA31D1D59CCE0000A9362 /* PBXContainerItemProxy */;
+		};
+		0F7EA3291D59CCE0000A9362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F7EA3071D59CCDF000A9362 /* ITGFrenchLeague */;
+			targetProxy = 0F7EA3281D59CCE0000A9362 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F7EA30F1D59CCE0000A9362 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F7EA3101D59CCE0000A9362 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F7EA3141D59CCE0000A9362 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F7EA3151D59CCE0000A9362 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F7EA32E1D59CCE0000A9362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F7EA32F1D59CCE0000A9362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F7EA3311D59CCE0000A9362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0F7EA3321D59CCE0000A9362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0F7EA3341D59CCE0000A9362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ITGFrenchLeagueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeagueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITGFrenchLeague.app/ITGFrenchLeague";
+			};
+			name = Debug;
+		};
+		0F7EA3351D59CCE0000A9362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ITGFrenchLeagueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeagueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITGFrenchLeague.app/ITGFrenchLeague";
+			};
+			name = Release;
+		};
+		0F7EA3371D59CCE0000A9362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ITGFrenchLeagueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeagueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ITGFrenchLeague;
+			};
+			name = Debug;
+		};
+		0F7EA3381D59CCE0000A9362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ITGFrenchLeagueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeagueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ITGFrenchLeague;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F7EA3031D59CCDF000A9362 /* Build configuration list for PBXProject "ITGFrenchLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F7EA32E1D59CCE0000A9362 /* Debug */,
+				0F7EA32F1D59CCE0000A9362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F7EA3301D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F7EA3311D59CCE0000A9362 /* Debug */,
+				0F7EA3321D59CCE0000A9362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0F7EA3331D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeagueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F7EA3341D59CCE0000A9362 /* Debug */,
+				0F7EA3351D59CCE0000A9362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0F7EA3361D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeagueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F7EA3371D59CCE0000A9362 /* Debug */,
+				0F7EA3381D59CCE0000A9362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F7EA3001D59CCDF000A9362 /* Project object */;
+}
