@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu Viewer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainMenuViewer" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fda-JR-gC9">
+                                <rect key="frame" x="282" y="313" width="36" height="30"/>
+                                <state key="normal" title="Défis"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLd-2a-Ckf">
+                                <rect key="frame" x="246" y="359" width="109" height="30"/>
+                                <state key="normal" title="Classment mois"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfL-b7-CqC">
+                                <rect key="frame" x="232" y="397" width="136" height="30"/>
+                                <state key="normal" title="Classement général"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn7-Ty-ab6">
+                                <rect key="frame" x="241" y="441" width="118" height="30"/>
+                                <state key="normal" title="Envoyer un score"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Smw-4y-Snf">
+                                <rect key="frame" x="180" y="96" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="zga-tY-qOf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OLd-2a-Ckf" firstAttribute="height" secondItem="fda-JR-gC9" secondAttribute="height" id="452-vm-Wya"/>
+                            <constraint firstItem="OfL-b7-CqC" firstAttribute="top" secondItem="OLd-2a-Ckf" secondAttribute="bottom" constant="8" symbolic="YES" id="L8g-sy-4tj"/>
+                            <constraint firstAttribute="bottom" secondItem="OfL-b7-CqC" secondAttribute="bottom" constant="173" id="MUJ-iK-GvW"/>
+                            <constraint firstItem="fda-JR-gC9" firstAttribute="top" secondItem="Smw-4y-Snf" secondAttribute="bottom" constant="89" id="MbN-8D-mXK"/>
+                            <constraint firstItem="OfL-b7-CqC" firstAttribute="height" secondItem="fda-JR-gC9" secondAttribute="height" id="QWw-TN-QBj"/>
+                            <constraint firstItem="Smw-4y-Snf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TRR-eG-qh8"/>
+                            <constraint firstItem="OfL-b7-CqC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UYV-9w-krL"/>
+                            <constraint firstItem="Smw-4y-Snf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="VEQ-1P-1xh"/>
+                            <constraint firstItem="Sn7-Ty-ab6" firstAttribute="top" secondItem="OfL-b7-CqC" secondAttribute="bottom" constant="14" id="Vwe-tq-Nwh"/>
+                            <constraint firstItem="Sn7-Ty-ab6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xay-BP-pMK"/>
+                            <constraint firstItem="fda-JR-gC9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aRU-XH-Pf7"/>
+                            <constraint firstItem="fda-JR-gC9" firstAttribute="centerX" secondItem="Smw-4y-Snf" secondAttribute="centerX" id="ald-ap-h32"/>
+                            <constraint firstItem="Sn7-Ty-ab6" firstAttribute="height" secondItem="fda-JR-gC9" secondAttribute="height" id="huT-rK-jNo"/>
+                            <constraint firstItem="OLd-2a-Ckf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rm4-ld-N6q"/>
+                            <constraint firstItem="OfL-b7-CqC" firstAttribute="centerX" secondItem="Smw-4y-Snf" secondAttribute="centerX" id="sXB-Rk-jH6"/>
+                            <constraint firstItem="OLd-2a-Ckf" firstAttribute="top" secondItem="fda-JR-gC9" secondAttribute="bottom" constant="16" id="tGE-Zk-bXp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="challengeButton" destination="fda-JR-gC9" id="Mbp-2v-DUK"/>
+                        <outlet property="generalRankingButton" destination="OfL-b7-CqC" id="s0n-87-ECx"/>
+                        <outlet property="monthlyRankingButton" destination="OLd-2a-Ckf" id="AFI-bA-uhk"/>
+                        <outlet property="sendScoreButton" destination="Sn7-Ty-ab6" id="or7-wx-2ec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

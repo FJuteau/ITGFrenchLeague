@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0F7EA30C1D59CCE0000A9362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA30B1D59CCE0000A9362 /* AppDelegate.swift */; };
-		0F7EA30E1D59CCE0000A9362 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA30D1D59CCE0000A9362 /* ViewController.swift */; };
 		0F7EA3111D59CCE0000A9362 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7EA30F1D59CCE0000A9362 /* Main.storyboard */; };
 		0F7EA3131D59CCE0000A9362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7EA3121D59CCE0000A9362 /* Assets.xcassets */; };
 		0F7EA3161D59CCE0000A9362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7EA3141D59CCE0000A9362 /* LaunchScreen.storyboard */; };
 		0F7EA3211D59CCE0000A9362 /* ITGFrenchLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3201D59CCE0000A9362 /* ITGFrenchLeagueTests.swift */; };
 		0F7EA32C1D59CCE0000A9362 /* ITGFrenchLeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA32B1D59CCE0000A9362 /* ITGFrenchLeagueUITests.swift */; };
+		0F7EA3421D59D5AA000A9362 /* MainMenuViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3411D59D5AA000A9362 /* MainMenuViewer.swift */; };
+		0F7EA3441D5A01A5000A9362 /* GeneralRankingViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3431D5A01A5000A9362 /* GeneralRankingViewer.swift */; };
+		0F7EA34C1D5B65CE000A9362 /* DatabaseResponseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA34B1D5B65CE000A9362 /* DatabaseResponseService.swift */; };
+		0F7EA34F1D5B69F0000A9362 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA34E1D5B69F0000A9362 /* PlayerModel.swift */; };
+		0F7EA3541D5DD37A000A9362 /* TabModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3531D5DD37A000A9362 /* TabModelProtocol.swift */; };
+		0F7EA3561D5E11A3000A9362 /* MonthlyRankingViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3551D5E11A2000A9362 /* MonthlyRankingViewer.swift */; };
+		0F7EA3581D5E11F0000A9362 /* SongInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3571D5E11F0000A9362 /* SongInfoModel.swift */; };
+		D733EDE58A512AC99E9D6A8B /* Pods_ITGFrenchLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D148051D3FE5CFFDC57CD2FA /* Pods_ITGFrenchLeague.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A55DF861BCCDCEE24B3A70 /* Pods-ITGFrenchLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.release.xcconfig"; sourceTree = "<group>"; };
 		0F7EA3081D59CCDF000A9362 /* ITGFrenchLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITGFrenchLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7EA30B1D59CCE0000A9362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F7EA30D1D59CCE0000A9362 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F7EA3101D59CCE0000A9362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F7EA3121D59CCE0000A9362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F7EA3151D59CCE0000A9362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,15 @@
 		0F7EA3271D59CCE0000A9362 /* ITGFrenchLeagueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITGFrenchLeagueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7EA32B1D59CCE0000A9362 /* ITGFrenchLeagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITGFrenchLeagueUITests.swift; sourceTree = "<group>"; };
 		0F7EA32D1D59CCE0000A9362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F7EA3411D59D5AA000A9362 /* MainMenuViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewer.swift; sourceTree = "<group>"; };
+		0F7EA3431D5A01A5000A9362 /* GeneralRankingViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRankingViewer.swift; sourceTree = "<group>"; };
+		0F7EA34B1D5B65CE000A9362 /* DatabaseResponseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseResponseService.swift; sourceTree = "<group>"; };
+		0F7EA34E1D5B69F0000A9362 /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		0F7EA3531D5DD37A000A9362 /* TabModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabModelProtocol.swift; sourceTree = "<group>"; };
+		0F7EA3551D5E11A2000A9362 /* MonthlyRankingViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyRankingViewer.swift; sourceTree = "<group>"; };
+		0F7EA3571D5E11F0000A9362 /* SongInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongInfoModel.swift; sourceTree = "<group>"; };
+		D148051D3FE5CFFDC57CD2FA /* Pods_ITGFrenchLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITGFrenchLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8ADE29E0C487A684C6C8939 /* Pods-ITGFrenchLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D733EDE58A512AC99E9D6A8B /* Pods_ITGFrenchLeague.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E234A561F44817FE7F9C916 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8ADE29E0C487A684C6C8939 /* Pods-ITGFrenchLeague.debug.xcconfig */,
+				04A55DF861BCCDCEE24B3A70 /* Pods-ITGFrenchLeague.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		0F7EA2FF1D59CCDF000A9362 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +107,8 @@
 				0F7EA31F1D59CCE0000A9362 /* ITGFrenchLeagueTests */,
 				0F7EA32A1D59CCE0000A9362 /* ITGFrenchLeagueUITests */,
 				0F7EA3091D59CCDF000A9362 /* Products */,
+				0E234A561F44817FE7F9C916 /* Pods */,
+				61D9F1A80B85F8993CEC2E66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +126,13 @@
 			isa = PBXGroup;
 			children = (
 				0F7EA30B1D59CCE0000A9362 /* AppDelegate.swift */,
-				0F7EA30D1D59CCE0000A9362 /* ViewController.swift */,
-				0F7EA30F1D59CCE0000A9362 /* Main.storyboard */,
+				0F7EA3401D59D216000A9362 /* MainMenu */,
+				0F7EA33C1D59D1F0000A9362 /* Challenge */,
+				0F7EA33D1D59D1F0000A9362 /* GeneralRanking */,
+				0F7EA33E1D59D1F0000A9362 /* MonthlyRanking */,
+				0F7EA33F1D59D1F0000A9362 /* SendScore */,
+				0F7EA34A1D5B63EF000A9362 /* Services */,
+				0F7EA34D1D5B69E5000A9362 /* Models */,
 				0F7EA3121D59CCE0000A9362 /* Assets.xcassets */,
 				0F7EA3141D59CCE0000A9362 /* LaunchScreen.storyboard */,
 				0F7EA3171D59CCE0000A9362 /* Info.plist */,
@@ -125,6 +158,71 @@
 			path = ITGFrenchLeagueUITests;
 			sourceTree = "<group>";
 		};
+		0F7EA33C1D59D1F0000A9362 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Challenge;
+			sourceTree = "<group>";
+		};
+		0F7EA33D1D59D1F0000A9362 /* GeneralRanking */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA3431D5A01A5000A9362 /* GeneralRankingViewer.swift */,
+			);
+			path = GeneralRanking;
+			sourceTree = "<group>";
+		};
+		0F7EA33E1D59D1F0000A9362 /* MonthlyRanking */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA3551D5E11A2000A9362 /* MonthlyRankingViewer.swift */,
+			);
+			path = MonthlyRanking;
+			sourceTree = "<group>";
+		};
+		0F7EA33F1D59D1F0000A9362 /* SendScore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SendScore;
+			sourceTree = "<group>";
+		};
+		0F7EA3401D59D216000A9362 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA30F1D59CCE0000A9362 /* Main.storyboard */,
+				0F7EA3411D59D5AA000A9362 /* MainMenuViewer.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		0F7EA34A1D5B63EF000A9362 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA34B1D5B65CE000A9362 /* DatabaseResponseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0F7EA34D1D5B69E5000A9362 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F7EA3531D5DD37A000A9362 /* TabModelProtocol.swift */,
+				0F7EA34E1D5B69F0000A9362 /* PlayerModel.swift */,
+				0F7EA3571D5E11F0000A9362 /* SongInfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		61D9F1A80B85F8993CEC2E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D148051D3FE5CFFDC57CD2FA /* Pods_ITGFrenchLeague.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F7EA3301D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeague" */;
 			buildPhases = (
+				565A763C4455421C64C2EAE7 /* Check Pods Manifest.lock */,
 				0F7EA3041D59CCDF000A9362 /* Sources */,
 				0F7EA3051D59CCDF000A9362 /* Frameworks */,
 				0F7EA3061D59CCDF000A9362 /* Resources */,
+				CBB0D92A479C5F0C69B7A203 /* Embed Pods Frameworks */,
+				2A3F25F0BE7D5204228B749B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,13 +352,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A3F25F0BE7D5204228B749B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		565A763C4455421C64C2EAE7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBB0D92A479C5F0C69B7A203 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0F7EA3041D59CCDF000A9362 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F7EA30E1D59CCE0000A9362 /* ViewController.swift in Sources */,
+				0F7EA34F1D5B69F0000A9362 /* PlayerModel.swift in Sources */,
+				0F7EA3441D5A01A5000A9362 /* GeneralRankingViewer.swift in Sources */,
+				0F7EA3581D5E11F0000A9362 /* SongInfoModel.swift in Sources */,
+				0F7EA34C1D5B65CE000A9362 /* DatabaseResponseService.swift in Sources */,
+				0F7EA3561D5E11A3000A9362 /* MonthlyRankingViewer.swift in Sources */,
 				0F7EA30C1D59CCE0000A9362 /* AppDelegate.swift in Sources */,
+				0F7EA3421D59D5AA000A9362 /* MainMenuViewer.swift in Sources */,
+				0F7EA3541D5DD37A000A9362 /* TabModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +454,7 @@
 				0F7EA3101D59CCE0000A9362 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0F7EA3141D59CCE0000A9362 /* LaunchScreen.storyboard */ = {
@@ -399,23 +555,30 @@
 		};
 		0F7EA3311D59CCE0000A9362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8ADE29E0C487A684C6C8939 /* Pods-ITGFrenchLeague.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		0F7EA3321D59CCE0000A9362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A55DF861BCCDCEE24B3A70 /* Pods-ITGFrenchLeague.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -484,6 +647,7 @@
 				0F7EA3321D59CCE0000A9362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F7EA3331D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeagueTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +656,7 @@
 				0F7EA3351D59CCE0000A9362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F7EA3361D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeagueUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +665,7 @@
 				0F7EA3381D59CCE0000A9362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
