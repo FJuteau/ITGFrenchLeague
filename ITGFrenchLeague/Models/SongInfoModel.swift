@@ -16,10 +16,10 @@ class SongInfoModel: TabModelProtocol
   var stepArtist: String
   
   required init(withDictionary dic:[String:String]) {
-    title = ""
-    pack = ""
-    banner = ""
-    stepArtist = ""
+    title = dic["title"]!
+    pack = dic["pack"]!
+    banner = dic["banner"]!
+    stepArtist =  dic["stepArtist"]!
   }
   
 }

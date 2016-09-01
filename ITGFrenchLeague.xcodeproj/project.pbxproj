@@ -20,6 +20,8 @@
 		0F7EA3541D5DD37A000A9362 /* TabModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3531D5DD37A000A9362 /* TabModelProtocol.swift */; };
 		0F7EA3561D5E11A3000A9362 /* MonthlyRankingViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3551D5E11A2000A9362 /* MonthlyRankingViewer.swift */; };
 		0F7EA3581D5E11F0000A9362 /* SongInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3571D5E11F0000A9362 /* SongInfoModel.swift */; };
+		0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3591D630147000A9362 /* DatabaseFormatService.swift */; };
+		0F95CEEF1D6DE5FE00AA92F4 /* ChallengeViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F95CEEE1D6DE5FE00AA92F4 /* ChallengeViewer.swift */; };
 		D733EDE58A512AC99E9D6A8B /* Pods_ITGFrenchLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D148051D3FE5CFFDC57CD2FA /* Pods_ITGFrenchLeague.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		0F7EA3531D5DD37A000A9362 /* TabModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabModelProtocol.swift; sourceTree = "<group>"; };
 		0F7EA3551D5E11A2000A9362 /* MonthlyRankingViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyRankingViewer.swift; sourceTree = "<group>"; };
 		0F7EA3571D5E11F0000A9362 /* SongInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongInfoModel.swift; sourceTree = "<group>"; };
+		0F7EA3591D630147000A9362 /* DatabaseFormatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFormatService.swift; sourceTree = "<group>"; };
+		0F95CEEE1D6DE5FE00AA92F4 /* ChallengeViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewer.swift; sourceTree = "<group>"; };
 		D148051D3FE5CFFDC57CD2FA /* Pods_ITGFrenchLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITGFrenchLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8ADE29E0C487A684C6C8939 /* Pods-ITGFrenchLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +165,7 @@
 		0F7EA33C1D59D1F0000A9362 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				0F95CEEE1D6DE5FE00AA92F4 /* ChallengeViewer.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				0F7EA34B1D5B65CE000A9362 /* DatabaseResponseService.swift */,
+				0F7EA3591D630147000A9362 /* DatabaseFormatService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -409,8 +415,10 @@
 				0F7EA3441D5A01A5000A9362 /* GeneralRankingViewer.swift in Sources */,
 				0F7EA3581D5E11F0000A9362 /* SongInfoModel.swift in Sources */,
 				0F7EA34C1D5B65CE000A9362 /* DatabaseResponseService.swift in Sources */,
+				0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */,
 				0F7EA3561D5E11A3000A9362 /* MonthlyRankingViewer.swift in Sources */,
 				0F7EA30C1D59CCE0000A9362 /* AppDelegate.swift in Sources */,
+				0F95CEEF1D6DE5FE00AA92F4 /* ChallengeViewer.swift in Sources */,
 				0F7EA3421D59D5AA000A9362 /* MainMenuViewer.swift in Sources */,
 				0F7EA3541D5DD37A000A9362 /* TabModelProtocol.swift in Sources */,
 			);
