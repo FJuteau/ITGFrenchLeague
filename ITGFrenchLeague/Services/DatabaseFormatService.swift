@@ -24,7 +24,7 @@ class DatabaseFormatService {
       return entryArray
       
     case DatabaseURLConstants.songInfoTabNameValue:
-      return songInfoFormattedArray(entryArray)
+      return songInfoFormattedArray(array: entryArray)
       
     case DatabaseURLConstants.generalRankTabNameValue:
       return entryArray
@@ -43,7 +43,7 @@ class DatabaseFormatService {
   static func songInfoFormattedArray(array: Array<[String:String]>) -> Array<[String:String]> {
     var formattedArray = Array<[String:String]>()
     var index = 0
-    let columnArray = onlyRankColumnArray(array)
+    let columnArray = onlyRankColumnArray(JSONArray: array)
     while index != columnArray.count {
       var formattedDictionary = [String:String]()
       
@@ -72,7 +72,7 @@ class DatabaseFormatService {
   
   // This method is used to format the string according to the current JSON format
   static func rightJSONString(string: String) -> String {
-    return "[" + string.componentsSeparatedByString("[")[1]
+    return "[" + string.components(separatedBy:"[")[1]
   }
 }
 

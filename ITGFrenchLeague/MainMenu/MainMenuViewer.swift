@@ -23,10 +23,10 @@ class MainMenuViewer: UIViewController
   //MARK: - Life cycle
   
   override func viewDidLoad() {
-    challengeButton.addTarget(self, action: #selector(didTapOnChallengeButton), forControlEvents: .TouchUpInside)
-    monthlyRankingButton.addTarget(self, action: #selector(didTapOnMonthlyRankingButton), forControlEvents: .TouchUpInside)
-    generalRankingButton.addTarget(self, action: #selector(didTapOnGeneralRankingButton), forControlEvents: .TouchUpInside)
-    sendScoreButton.addTarget(self, action: #selector(didTapOnSendScoreButton), forControlEvents: .TouchUpInside)
+    challengeButton.addTarget(self, action: #selector(didTapOnChallengeButton), for: .touchUpInside)
+    monthlyRankingButton.addTarget(self, action: #selector(didTapOnMonthlyRankingButton), for: .touchUpInside)
+    generalRankingButton.addTarget(self, action: #selector(didTapOnGeneralRankingButton), for: .touchUpInside)
+    sendScoreButton.addTarget(self, action: #selector(didTapOnSendScoreButton), for: .touchUpInside)
     
   }
   
@@ -35,21 +35,21 @@ class MainMenuViewer: UIViewController
   
   func didTapOnChallengeButton() {
     print("ALLO 1")
-    self.presentViewController(challengeViewer, animated:true, completion:nil)
+    self.present(challengeViewer, animated:true, completion:nil)
     
   }
   
   
   func didTapOnMonthlyRankingButton() {
     print("ALLO 2")
-    self.presentViewController(monthlyRankingViewer, animated:true, completion:nil)
+    self.present(monthlyRankingViewer, animated:true, completion:nil)
     
   }
   
   
   func didTapOnGeneralRankingButton() {
     print("ALLO 3")
-    self.presentViewController(generalRankingViewer, animated:true, completion:nil)
+    self.present(generalRankingViewer, animated:true, completion:nil)
   }
   
   
