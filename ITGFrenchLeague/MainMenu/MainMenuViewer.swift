@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class MainMenuViewer: UIViewController
-{
+class MainMenuViewer: UIViewController {
+  
   @IBOutlet weak var challengeButton: UIButton!
   @IBOutlet weak var monthlyRankingButton: UIButton!
   @IBOutlet weak var generalRankingButton: UIButton!
@@ -28,6 +28,13 @@ class MainMenuViewer: UIViewController
     generalRankingButton.addTarget(self, action: #selector(didTapOnGeneralRankingButton), for: .touchUpInside)
     sendScoreButton.addTarget(self, action: #selector(didTapOnSendScoreButton), for: .touchUpInside)
     
+    
+    
+    DatabaseResponseService.JSONResponse(for: TabType.playersTabName, genericType: PlayerModel.self) { result in
+      
+      let players = [String: PlayerModel](elements:result.map { ($0.name, $0) })
+      DataRetainer.players = players
+    }
   }
   
   
@@ -60,4 +67,13 @@ class MainMenuViewer: UIViewController
   
   
   
+}
+
+extension Dictionary {
+  init(elements:[(Key, Value)]) {
+    self.init()
+    for (key, value) in elements {
+      updateValue(value, forKey: key)
+    }
+  }
 }

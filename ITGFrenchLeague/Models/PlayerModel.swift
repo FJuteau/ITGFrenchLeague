@@ -8,18 +8,24 @@
 
 import Foundation
 
-class PlayerModel: TabModelProtocol
-{
-  var age: String
+struct PlayerModel: TabModelProtocol {
+  
+  var since: String
   var description: String
   var name: String
   var photo: String
   
-  required init(withDictionary dic:[String:String]) {
-    age = dic["Age"]!
-    description = dic["Description"]!
-    name = dic["Name"]!
-    photo = dic["Photo"]!
+  init?(withDictionary dic:[String:String]) {
+    
+    guard let since     = dic["Since"],
+      let description = dic["Description"],
+      let name        = dic["Name"],
+      let photo       = dic["Photo"] else { return nil }
+    
+    self.since        = since
+    self.description  = description
+    self.name         = name
+    self.photo        =  photo
   }
   
 }

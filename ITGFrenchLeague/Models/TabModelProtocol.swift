@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TabModelProtocol {
-  init(withDictionary dic:[String:String])
+  init?(withDictionary dic:[String:String])
 }

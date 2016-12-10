@@ -22,7 +22,8 @@
 		0F7EA3581D5E11F0000A9362 /* SongInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3571D5E11F0000A9362 /* SongInfoModel.swift */; };
 		0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3591D630147000A9362 /* DatabaseFormatService.swift */; };
 		0F95CEEF1D6DE5FE00AA92F4 /* ChallengeViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F95CEEE1D6DE5FE00AA92F4 /* ChallengeViewer.swift */; };
-		D733EDE58A512AC99E9D6A8B /* Pods_ITGFrenchLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D148051D3FE5CFFDC57CD2FA /* Pods_ITGFrenchLeague.framework */; };
+		42D1C4DE1DFC604500097770 /* DataRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4DD1DFC604500097770 /* DataRetainer.swift */; };
+		A52C7091AA70CF3B12811472 /* Pods_ITGFrenchLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946B3ECEB60E0B052EF257F8 /* Pods_ITGFrenchLeague.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A55DF861BCCDCEE24B3A70 /* Pods-ITGFrenchLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.release.xcconfig"; sourceTree = "<group>"; };
 		0F7EA3081D59CCDF000A9362 /* ITGFrenchLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITGFrenchLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7EA30B1D59CCE0000A9362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F7EA3101D59CCE0000A9362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,8 +65,10 @@
 		0F7EA3571D5E11F0000A9362 /* SongInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongInfoModel.swift; sourceTree = "<group>"; };
 		0F7EA3591D630147000A9362 /* DatabaseFormatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFormatService.swift; sourceTree = "<group>"; };
 		0F95CEEE1D6DE5FE00AA92F4 /* ChallengeViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewer.swift; sourceTree = "<group>"; };
-		D148051D3FE5CFFDC57CD2FA /* Pods_ITGFrenchLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITGFrenchLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8ADE29E0C487A684C6C8939 /* Pods-ITGFrenchLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.debug.xcconfig"; sourceTree = "<group>"; };
+		42D1C4DD1DFC604500097770 /* DataRetainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRetainer.swift; sourceTree = "<group>"; };
+		44AF0CCF6A2C388CDA722F3D /* Pods-ITGFrenchLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.debug.xcconfig"; sourceTree = "<group>"; };
+		5BAC9242AD03B1568EBE6075 /* Pods-ITGFrenchLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.release.xcconfig"; sourceTree = "<group>"; };
+		946B3ECEB60E0B052EF257F8 /* Pods_ITGFrenchLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITGFrenchLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D733EDE58A512AC99E9D6A8B /* Pods_ITGFrenchLeague.framework in Frameworks */,
+				A52C7091AA70CF3B12811472 /* Pods_ITGFrenchLeague.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,15 +97,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E234A561F44817FE7F9C916 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F8ADE29E0C487A684C6C8939 /* Pods-ITGFrenchLeague.debug.xcconfig */,
-				04A55DF861BCCDCEE24B3A70 /* Pods-ITGFrenchLeague.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		0F7EA2FF1D59CCDF000A9362 = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +104,8 @@
 				0F7EA31F1D59CCE0000A9362 /* ITGFrenchLeagueTests */,
 				0F7EA32A1D59CCE0000A9362 /* ITGFrenchLeagueUITests */,
 				0F7EA3091D59CCDF000A9362 /* Products */,
-				0E234A561F44817FE7F9C916 /* Pods */,
-				61D9F1A80B85F8993CEC2E66 /* Frameworks */,
+				F53953791EF995FA87EB6FF3 /* Pods */,
+				4DB8B58DE9714F31C00B0DC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +200,7 @@
 			children = (
 				0F7EA34B1D5B65CE000A9362 /* DatabaseResponseService.swift */,
 				0F7EA3591D630147000A9362 /* DatabaseFormatService.swift */,
+				42D1C4DD1DFC604500097770 /* DataRetainer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,12 +215,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		61D9F1A80B85F8993CEC2E66 /* Frameworks */ = {
+		4DB8B58DE9714F31C00B0DC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D148051D3FE5CFFDC57CD2FA /* Pods_ITGFrenchLeague.framework */,
+				946B3ECEB60E0B052EF257F8 /* Pods_ITGFrenchLeague.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F53953791EF995FA87EB6FF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44AF0CCF6A2C388CDA722F3D /* Pods-ITGFrenchLeague.debug.xcconfig */,
+				5BAC9242AD03B1568EBE6075 /* Pods-ITGFrenchLeague.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,12 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F7EA3301D59CCE0000A9362 /* Build configuration list for PBXNativeTarget "ITGFrenchLeague" */;
 			buildPhases = (
-				565A763C4455421C64C2EAE7 /* Check Pods Manifest.lock */,
+				43F0E860DEBE93E57B557964 /* [CP] Check Pods Manifest.lock */,
 				0F7EA3041D59CCDF000A9362 /* Sources */,
 				0F7EA3051D59CCDF000A9362 /* Frameworks */,
 				0F7EA3061D59CCDF000A9362 /* Resources */,
-				CBB0D92A479C5F0C69B7A203 /* Embed Pods Frameworks */,
-				2A3F25F0BE7D5204228B749B /* Copy Pods Resources */,
+				99820EF3D5CBA11D29CF4F56 /* [CP] Embed Pods Frameworks */,
+				AC2C0C77014A6AA27B52CBA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,7 +298,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Fjuteau;
 				TargetAttributes = {
 					0F7EA3071D59CCDF000A9362 = {
@@ -359,49 +362,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A3F25F0BE7D5204228B749B /* Copy Pods Resources */ = {
+		43F0E860DEBE93E57B557964 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		565A763C4455421C64C2EAE7 /* Check Pods Manifest.lock */ = {
+		99820EF3D5CBA11D29CF4F56 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CBB0D92A479C5F0C69B7A203 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC2C0C77014A6AA27B52CBA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -416,6 +419,7 @@
 				0F7EA3581D5E11F0000A9362 /* SongInfoModel.swift in Sources */,
 				0F7EA34C1D5B65CE000A9362 /* DatabaseResponseService.swift in Sources */,
 				0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */,
+				42D1C4DE1DFC604500097770 /* DataRetainer.swift in Sources */,
 				0F7EA3561D5E11A3000A9362 /* MonthlyRankingViewer.swift in Sources */,
 				0F7EA30C1D59CCE0000A9362 /* AppDelegate.swift in Sources */,
 				0F95CEEF1D6DE5FE00AA92F4 /* ChallengeViewer.swift in Sources */,
@@ -490,8 +494,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -518,6 +524,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -536,8 +543,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -556,6 +565,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -563,8 +574,9 @@
 		};
 		0F7EA3311D59CCE0000A9362 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8ADE29E0C487A684C6C8939 /* Pods-ITGFrenchLeague.debug.xcconfig */;
+			baseConfigurationReference = 44AF0CCF6A2C388CDA722F3D /* Pods-ITGFrenchLeague.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
@@ -578,8 +590,9 @@
 		};
 		0F7EA3321D59CCE0000A9362 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04A55DF861BCCDCEE24B3A70 /* Pods-ITGFrenchLeague.release.xcconfig */;
+			baseConfigurationReference = 5BAC9242AD03B1568EBE6075 /* Pods-ITGFrenchLeague.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;

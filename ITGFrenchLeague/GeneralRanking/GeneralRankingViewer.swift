@@ -10,8 +10,8 @@ import UIKit
 class GeneralRankingViewer: UIViewController {
   
   override func viewDidLoad() {
-    let service = DatabaseResponseService()
-    service.JSONResponse(forTabType: DatabaseURLConstants.playersTabNameValue, genericType: PlayerModel.self) { result in
+    
+    DatabaseResponseService.JSONResponse(for: TabType.playersTabName, genericType: PlayerModel.self) { result in
       for itemDict in result  {
         print("itemDict : \(itemDict.name)")
       }

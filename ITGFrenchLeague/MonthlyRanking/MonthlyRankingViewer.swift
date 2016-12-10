@@ -11,8 +11,8 @@ import UIKit
 class MonthlyRankingViewer: UIViewController {
   
   override func viewDidLoad() {
-    let service = DatabaseResponseService()
-    service.JSONResponse(forTabType: DatabaseURLConstants.monthlyRankTabNameValue, genericType: SongInfoModel.self) { result in
+    
+    DatabaseResponseService.JSONResponse(for: TabType.monthlyRankTabName, genericType: SongInfoModel.self) { result in
       for itemDict in result  {
         print("itemDict : \(itemDict.title)")
       }

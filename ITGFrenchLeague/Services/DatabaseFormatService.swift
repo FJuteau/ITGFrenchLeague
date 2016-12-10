@@ -17,22 +17,19 @@ import Foundation
 
 class DatabaseFormatService {
   
-  static func formattedJSONResponse(entryArray: Array<[String:String]>, tabType: String) -> Array<[String:String]> {
+  static func formattedJSONResponse(entryArray: Array<[String:String]>, tabType: TabType) -> Array<[String:String]> {
     
     switch tabType {
-    case DatabaseURLConstants.playersTabNameValue:
+    case TabType.playersTabName:
       return entryArray
       
-    case DatabaseURLConstants.songInfoTabNameValue:
+    case TabType.songInfoTabName:
       return songInfoFormattedArray(array: entryArray)
       
-    case DatabaseURLConstants.generalRankTabNameValue:
+    case TabType.generalRankTabName:
       return entryArray
       
-    case DatabaseURLConstants.monthlyRankTabNameValue:
-      return entryArray
-      
-    default:
+    case TabType.monthlyRankTabName:
       return entryArray
     }
   }

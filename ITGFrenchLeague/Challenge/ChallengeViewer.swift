@@ -11,8 +11,8 @@ import UIKit
 class ChallengeViewer: UIViewController {
   
   override func viewDidLoad() {
-    let service = DatabaseResponseService()
-    service.JSONResponse(forTabType: DatabaseURLConstants.songInfoTabNameValue, genericType: SongInfoModel.self) { result in
+    
+    DatabaseResponseService.JSONResponse(for: TabType.songInfoTabName, genericType: SongInfoModel.self) { result in
       for itemDict in result  {
         print("itemDict : \(itemDict.title)")
       }
