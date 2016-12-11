@@ -15,21 +15,27 @@
 
 import Foundation
 
-class DatabaseFormatService {
+enum TabType : String {
   
-  static func formattedJSONResponse(entryArray: Array<[String:String]>, tabType: TabType) -> Array<[String:String]> {
+  case playersTabName      = "Players"
+  case songInfoTabName     = "SongInfo"
+  case generalRankTabName  = "GlobalRank"
+  case monthlyRankTabName  = "Rank"
+  
+  
+  func formattedJSONResponse(entryArray: [[String:String]]) -> [[String:String]] {
     
-    switch tabType {
-    case TabType.playersTabName:
+    switch self {
+    case .playersTabName:
       return entryArray
       
-    case TabType.songInfoTabName:
+    case .songInfoTabName:
       return songInfoFormattedArray(array: entryArray)
       
-    case TabType.generalRankTabName:
+    case .generalRankTabName:
       return entryArray
       
-    case TabType.monthlyRankTabName:
+    case .monthlyRankTabName:
       return entryArray
     }
   }
@@ -37,39 +43,71 @@ class DatabaseFormatService {
 
   // MARK: - Song Info
   
-  static func songInfoFormattedArray(array: Array<[String:String]>) -> Array<[String:String]> {
-    var formattedArray = Array<[String:String]>()
+  // This function is so ugly
+  func songInfoFormattedArray(array: [[String:String]]) -> [[String:String]] {
+    
+    var formattedArray = [[String:String]]()
     var index = 0
-    let columnArray = onlyRankColumnArray(JSONArray: array)
-    while index != columnArray.count {
+    let rankColumnArray = columnArray(with: array, for: "Rank")
+    while index < rankColumnArray.count {
       var formattedDictionary = [String:String]()
       
-      formattedDictionary["title"]      = columnArray[index]
-      formattedDictionary["pack"]       = columnArray[index+1]
-      formattedDictionary["banner"]     = columnArray[index+2]
-      formattedDictionary["stepArtist"] = columnArray[index+3]
+      formattedDictionary["title"]      = rankColumnArray[index]
+      formattedDictionary["pack"]       = rankColumnArray[index+1]
+      formattedDictionary["banner"]     = rankColumnArray[index+2]
+      formattedDictionary["stepArtist"] = rankColumnArray[index+3]
+      formattedDictionary["level"]      = rankColumnArray[index+4]
       
-      index = index + 4
+      index = index + 5
       formattedArray.append(formattedDictionary)
     }
+    
+    let typeColumnArray = columnArray(with: array, for: "Type")
+    print("ojqsojdoqsjdqpjsdp\(typeColumnArray)")
+    let typeSongArray = typeColumnArray.filter { isType(string: $0) }.map { normalize(string: $0) }
+    
+    if typeSongArray.count == formattedArray.count {
+      index = 0
+      while index < typeSongArray.count {
+        
+        formattedArray[index]["type"] = typeSongArray[index]
+        index += 1
+      }
+    }
+    
     return formattedArray
   }
   
   //  The database is really tricky
   //  We only need the rank column
-  static func onlyRankColumnArray(JSONArray: Array<[String:String]>) -> [String] {
+  func columnArray(with jsonArray: [[String:String]], for key: String) -> [String] {
+    
     var columnArray = [String]()
-    for item in JSONArray {
-      columnArray.append(item["Rank"]!)
+    for item in jsonArray {
+      
+      if let column = item[key] {
+        
+        columnArray.append(column)
+      }
     }
     return columnArray
   }
   
-  // MARK: - 
+  func isType(string: String) -> Bool {
+    
+    if string.contains("Speed") ||
+      string.contains("Stamina") ||
+      string.contains("Timing") {
+      
+      return true
+    }
+    return false
+  }
   
-  // This method is used to format the string according to the current JSON format
-  static func rightJSONString(string: String) -> String {
-    return "[" + string.components(separatedBy:"[")[1]
+  func normalize(string: String) -> String {
+    
+    let components = string.components(separatedBy: "-")
+    return components[1]
   }
 }
 

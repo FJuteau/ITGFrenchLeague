@@ -29,11 +29,15 @@ class MainMenuViewer: UIViewController {
     sendScoreButton.addTarget(self, action: #selector(didTapOnSendScoreButton), for: .touchUpInside)
     
     
-    
-    DatabaseResponseService.JSONResponse(for: TabType.playersTabName, genericType: PlayerModel.self) { result in
+    DatabaseResponseService.JSONResponse(for: TabType.playersTabName, genericType: Player.self) { result in
       
-      let players = [String: PlayerModel](elements:result.map { ($0.name, $0) })
+      let players = [String: Player](elements:result.map { ($0.name, $0) })
       DataRetainer.players = players
+    }
+    DatabaseResponseService.JSONResponse(for: .songInfoTabName, genericType: Song.self) { result in
+      
+      DataRetainer.songs = result
+      print(result)
     }
   }
   

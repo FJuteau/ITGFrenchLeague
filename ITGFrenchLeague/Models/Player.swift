@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PlayerModel: TabModelProtocol {
+struct Player: TabModelProtocol {
   
   var since: String
   var description: String
@@ -17,7 +17,7 @@ struct PlayerModel: TabModelProtocol {
   
   init?(withDictionary dic:[String:String]) {
     
-    guard let since     = dic["Since"],
+    guard let since   = dic["Since"],
       let description = dic["Description"],
       let name        = dic["Name"],
       let photo       = dic["Photo"] else { return nil }
@@ -25,7 +25,7 @@ struct PlayerModel: TabModelProtocol {
     self.since        = since
     self.description  = description
     self.name         = name
-    self.photo        =  photo
+    self.photo        = photo
   }
   
 }

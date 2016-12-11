@@ -16,13 +16,6 @@ struct DatabaseURLConstants {
 }
 
 
-enum TabType : String {
-  case playersTabName      = "Players"
-  case songInfoTabName     = "SongInfo"
-  case generalRankTabName  = "GlobalRank"
-  case monthlyRankTabName  = "Rank"
-}
-
 
 class DatabaseResponseService {
   
@@ -38,18 +31,18 @@ class DatabaseResponseService {
         if let data = data {
           do {
             if let resultString = String(data: data, encoding: String.Encoding.utf8) {
-            let JSONString = DatabaseFormatService.rightJSONString(string: resultString)
+            let JSONString = rightJSONString(string: resultString)
             let data = JSONString.data(using: String.Encoding.utf8)
               
             let databaseArray = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
             
             print("databaseArray: \(databaseArray)")
-            if let JSONArray = databaseArray as? Array<[String : String]> {
-              //              print("JSON: \(JSONArray)")
-              // This call shouldn't exist but since the database is oddly formatted we have to pass through this
-              let formattedJSONArray = DatabaseFormatService.formattedJSONResponse(entryArray: JSONArray, tabType: tabType)
+            if let JSONArray = databaseArray as? [[String : String]] {
               
-              var playerArray: Array<TabModel> = Array()
+              // This call shouldn't exist but since the database is oddly formatted we have to pass through this
+              let formattedJSONArray = tabType.formattedJSONResponse(entryArray: JSONArray)
+              
+              var playerArray: [TabModel] = []
               for itemDict in formattedJSONArray {
                 if let model = TabModel(withDictionary: itemDict) {
                   playerArray.append(model)
@@ -71,5 +64,10 @@ class DatabaseResponseService {
       }
       dataTask.resume()
     }
+  }
+  
+  // This method is used to format the string according to the current JSON format
+  static func rightJSONString(string: String) -> String {
+    return "[" + string.components(separatedBy:"[")[1]
   }
 }
