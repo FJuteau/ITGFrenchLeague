@@ -12,7 +12,7 @@ struct MonthlyRank: TabModelProtocol {
   
   var playerName  : String
   var rank        : Int
-  var songName    : String
+  var songTitle    : String
   var songScore   : String
   
   
@@ -21,12 +21,12 @@ struct MonthlyRank: TabModelProtocol {
     guard let playerName  = dic["Player"],
       let rankString      = dic["Rank"],
       let rank            = Int(rankString),
-      let songName        = dic["SongName"],
+      let songTitle       = dic["SongTitle"],
       let songScore       = dic["SongScore"] else { return nil }
     
     self.playerName = playerName
     self.rank       = rank
-    self.songName   = songName
+    self.songTitle  = songTitle
     self.songScore  = songScore
   }
   

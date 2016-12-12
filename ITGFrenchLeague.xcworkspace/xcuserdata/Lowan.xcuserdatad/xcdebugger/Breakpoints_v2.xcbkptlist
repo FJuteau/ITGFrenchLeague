@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ITGFrenchLeague/Services/DatabaseFormatService.swift"
-            timestampString = "503272807.610957"
+            timestampString = "503278544.527306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "formattedOverallRank(from:)"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "formattedSpeedRank(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -49,8 +49,16 @@ class MainMenuViewer: UIViewController {
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
       DataRetainer.overallMonthlyRank = sortedResult
+      
+      DatabaseResponseService.JSONResponse(for: .speedMonthlyRank, genericType: MonthlyRank.self) { result in
+        
+        let sortedResult = result.sorted { $0.rank < $1.rank }
+        DataRetainer.speedMonthlyRank = sortedResult
+        print("SPEED LOAD : \(sortedResult)")
+      }
       print(sortedResult)
     }
+    
   }
   
   

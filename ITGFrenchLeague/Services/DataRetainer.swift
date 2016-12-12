@@ -14,5 +14,10 @@ struct DataRetainer {
   static var songs              : [Song]?
   static var globalRank         : [GlobalRank]?
   static var overallMonthlyRank : [OverallMonthlyRank]?
+  static var speedMonthlyRank   : [MonthlyRank]?
   
+  static func songs(of type: SongType) -> [Song] {
+    
+    return (songs?.filter { $0.type == type })!
+  }
 }
