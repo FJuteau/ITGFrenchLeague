@@ -24,7 +24,7 @@ class DatabaseResponseService {
   static func JSONResponse<TabModel: TabModelProtocol>(for tabType: TabType, genericType: TabModel.Type, result:@escaping ([TabModel]) -> Void) {
     
     // https://script.google.com/macros/s/AKfycbyoUM3T59g2gjSDBdVjQXph7recGj8WgsVDpnP3kKL9JTwYrhxa/exec?action=getTable&type=TabType&ssid=1UFzH3GTR2cUoa1cTw4bHqxPWB5EQ4I_EEViV4Yo-Uxo
-    if let url = URL(string:"\(DatabaseURLConstants.scriptURL)\(DatabaseURLConstants.actionTypeParam)&\(DatabaseURLConstants.tabNameKey)=\(tabType.rawValue)&\(DatabaseURLConstants.spreadsheetIdParam)") {
+    if let url = URL(string:"\(DatabaseURLConstants.scriptURL)\(DatabaseURLConstants.actionTypeParam)&\(DatabaseURLConstants.tabNameKey)=\(tabType.tabName())&\(DatabaseURLConstants.spreadsheetIdParam)") {
       
       let dataTask = self.urlSession.dataTask(with: url) { (data, response, error) in
         

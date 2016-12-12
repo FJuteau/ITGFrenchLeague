@@ -15,27 +15,61 @@
 
 import Foundation
 
-enum TabType : String {
+enum TabType {
   
-  case playersTabName       = "Players"
-  case songInfoTabName      = "SongInfo"
-  case globalRankTabName    = "GlobalRank"
-  case monthlyRankTabName   = "Rank"
+  case players
+  case songInfo
+  case globalRank
+  case overallMonthlyRank
+  case speedMonthlyRank
+  case staminaMonthlyRank
+  case timingMonthlyRank
+  
+  
+  func tabName() -> String {
+    
+    switch self {
+      
+    case .players:
+      return "Players"
+      
+    case .songInfo:
+      return "SongInfo"
+      
+    case .globalRank:
+      return "GlobalRank"
+      
+    case .overallMonthlyRank,
+         .speedMonthlyRank,
+         .staminaMonthlyRank,
+         .timingMonthlyRank:
+      return "Rank"
+    }
+  }
   
   
   func formattedJSONResponse(entryArray: [[String:String]]) -> [[String:String]] {
     
     switch self {
-    case .playersTabName:
+    case .players:
       return entryArray
       
-    case .songInfoTabName:
-      return songInfoFormattedArray(array: entryArray)
+    case .songInfo:
+      return formattedSongInfo(from: entryArray)
       
-    case .globalRankTabName:
+    case .globalRank:
       return entryArray
       
-    case .monthlyRankTabName:
+    case .overallMonthlyRank:
+      return entryArray
+      
+    case .speedMonthlyRank:
+      return entryArray
+      
+    case .staminaMonthlyRank:
+      return entryArray
+      
+    case .timingMonthlyRank:
       return entryArray
     }
   }
@@ -44,7 +78,7 @@ enum TabType : String {
   // MARK: - Song Info
   
   // This function is so ugly
-  func songInfoFormattedArray(array: [[String:String]]) -> [[String:String]] {
+  func formattedSongInfo(from array: [[String:String]]) -> [[String:String]] {
     
     var formattedArray = [[String:String]]()
     var index = 0
@@ -63,7 +97,6 @@ enum TabType : String {
     }
     
     let typeColumnArray = columnArray(with: array, for: "Type")
-    print("ojqsojdoqsjdqpjsdp\(typeColumnArray)")
     let typeSongArray = typeColumnArray.filter { isType(string: $0) }.map { normalize(string: $0) }
     
     if typeSongArray.count == formattedArray.count {
@@ -108,6 +141,14 @@ enum TabType : String {
     
     let components = string.components(separatedBy: "-")
     return components[1]
+  }
+  
+  // MARK: - Overall Monthly Rank
+  
+  func formattedOverallRank(from array: [[String:String]]) -> [[String:String]] {
+    
+    
+    return array
   }
 }
 

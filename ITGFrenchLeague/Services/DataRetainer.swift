@@ -10,8 +10,9 @@ import Foundation
 
 struct DataRetainer {
   
-  static var players: [String: Player]?
-  static var songs: [Song]?
-  static var globalRank: [GlobalRank]?
+  static var players            : [String: Player]?
+  static var songs              : [Song]?
+  static var globalRank         : [GlobalRank]?
+  static var overallMonthlyRank : [OverallMonthlyRank]?
   
 }

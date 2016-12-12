@@ -29,20 +29,26 @@ class MainMenuViewer: UIViewController {
     sendScoreButton.addTarget(self, action: #selector(didTapOnSendScoreButton), for: .touchUpInside)
     
     
-    DatabaseResponseService.JSONResponse(for: TabType.playersTabName, genericType: Player.self) { result in
+    DatabaseResponseService.JSONResponse(for: .players, genericType: Player.self) { result in
       
       let players = [String: Player](elements:result.map { ($0.name, $0) })
       DataRetainer.players = players
     }
-    DatabaseResponseService.JSONResponse(for: .songInfoTabName, genericType: Song.self) { result in
+    DatabaseResponseService.JSONResponse(for: .songInfo, genericType: Song.self) { result in
       
       DataRetainer.songs = result
       print(result)
     }
-    DatabaseResponseService.JSONResponse(for: .globalRankTabName, genericType: GlobalRank.self) { result in
+    DatabaseResponseService.JSONResponse(for: .globalRank, genericType: GlobalRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
       DataRetainer.globalRank = sortedResult
+      print(sortedResult)
+    }
+    DatabaseResponseService.JSONResponse(for: .overallMonthlyRank, genericType: OverallMonthlyRank.self) { result in
+      
+      let sortedResult = result.sorted { $0.rank < $1.rank }
+      DataRetainer.overallMonthlyRank = sortedResult
       print(sortedResult)
     }
   }

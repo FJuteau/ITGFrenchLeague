@@ -11,7 +11,7 @@ class GeneralRankingViewer: UIViewController {
   
   override func viewDidLoad() {
     
-    DatabaseResponseService.JSONResponse(for: TabType.playersTabName, genericType: Player.self) { result in
+    DatabaseResponseService.JSONResponse(for: .players, genericType: Player.self) { result in
       for itemDict in result  {
         print("itemDict : \(itemDict.name)")
       }

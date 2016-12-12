@@ -12,7 +12,7 @@ class ChallengeViewer: UIViewController {
   
   override func viewDidLoad() {
     
-    DatabaseResponseService.JSONResponse(for: TabType.songInfoTabName, genericType: Song.self) { result in
+    DatabaseResponseService.JSONResponse(for: .songInfo, genericType: Song.self) { result in
       for itemDict in result  {
         print("itemDict : \(itemDict.title)")
       }

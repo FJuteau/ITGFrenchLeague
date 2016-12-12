@@ -12,7 +12,7 @@ class MonthlyRankingViewer: UIViewController {
   
   override func viewDidLoad() {
     
-    DatabaseResponseService.JSONResponse(for: .monthlyRankTabName, genericType: Song.self) { result in
+    DatabaseResponseService.JSONResponse(for: .overallMonthlyRank, genericType: Song.self) { result in
       for itemDict in result  {
         print("itemDict : \(itemDict.title)")
       }
