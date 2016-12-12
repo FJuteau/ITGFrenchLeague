@@ -39,6 +39,12 @@ class MainMenuViewer: UIViewController {
       DataRetainer.songs = result
       print(result)
     }
+    DatabaseResponseService.JSONResponse(for: .globalRankTabName, genericType: GlobalRank.self) { result in
+      
+      let sortedResult = result.sorted { $0.rank < $1.rank }
+      DataRetainer.globalRank = sortedResult
+      print(sortedResult)
+    }
   }
   
   

@@ -17,10 +17,10 @@ import Foundation
 
 enum TabType : String {
   
-  case playersTabName      = "Players"
-  case songInfoTabName     = "SongInfo"
-  case generalRankTabName  = "GlobalRank"
-  case monthlyRankTabName  = "Rank"
+  case playersTabName       = "Players"
+  case songInfoTabName      = "SongInfo"
+  case globalRankTabName    = "GlobalRank"
+  case monthlyRankTabName   = "Rank"
   
   
   func formattedJSONResponse(entryArray: [[String:String]]) -> [[String:String]] {
@@ -32,7 +32,7 @@ enum TabType : String {
     case .songInfoTabName:
       return songInfoFormattedArray(array: entryArray)
       
-    case .generalRankTabName:
+    case .globalRankTabName:
       return entryArray
       
     case .monthlyRankTabName:

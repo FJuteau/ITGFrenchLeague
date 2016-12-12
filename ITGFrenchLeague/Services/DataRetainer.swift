@@ -12,5 +12,6 @@ struct DataRetainer {
   
   static var players: [String: Player]?
   static var songs: [Song]?
+  static var globalRank: [GlobalRank]?
   
 }
