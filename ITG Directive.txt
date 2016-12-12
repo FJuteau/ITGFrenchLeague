@@ -1,0 +1,31 @@
+Je charge SongInfo, Rank et GlobalRank
+
+[5:34]  
+ensuite j'affiche le menu c'est la condition sine qua none pour que le menu s'affiche
+
+[5:35]  
+ensuite en tache de fond je load Players pour load les photos des gens (si t'es déjà dans un menu ça rafraichit tout seul)
+
+[5:35]  
+et je load aussi les banners des songs en tache de fond
+
+[5:35]  
+Après l'historique c'est un chargement / historique visité vu qu'à prioris c'est pas le genre de truc dans lequel on va souvent.
+
+[5:36]  
+Au petit truc, quand je detecte que c'est la première fois du mois que le mec allume son app
+
+[5:36]  
+je vais chercher si l'historique du mois passé existe
+
+[5:36]  
+si oui alors j'affiche une popup des 3 premiers arrivés au mois passés
+
+[5:37]  
+sinon (car oui okami et moi on va pas être TAQUET a 00h00 pour changer les défis) je considère que le joueur n'a pas lancé l'app ce mois ci, et ça recheckera la prochaine fois qu'il lancera l'app
+
+[5:38]  
+Et pendant ce temps j'affiche "Le défi est terminé" dans le menu "défi du mois", au lieu de "il reste x jours"
+
+[5:38]  
+voilà :stuck_out_tongue:
