@@ -63,14 +63,46 @@ enum TabType {
     case .overallMonthlyRank:
       return entryArray
       
+    case .speedMonthlyRank,
+         .staminaMonthlyRank,
+         .timingMonthlyRank:
+      return formattedRank(from: entryArray)
+    }
+  }
+  
+  func songType() -> SongType {
+    
+    switch self {
+      
     case .speedMonthlyRank:
-      return entryArray
+      return .speed
       
     case .staminaMonthlyRank:
-      return entryArray
+      return .stamina
       
     case .timingMonthlyRank:
-      return entryArray
+      return .timing
+      
+    default:
+      return .speed
+    }
+  }
+  
+  func rankColumn() -> String {
+    
+    switch self {
+      
+    case .speedMonthlyRank:
+      return "Speed Rank"
+      
+    case .staminaMonthlyRank:
+      return "Stamina Rank"
+      
+    case .timingMonthlyRank:
+      return "Timing Rank"
+      
+    default:
+      return "none"
     }
   }
   
@@ -145,25 +177,25 @@ enum TabType {
   
   // MARK: - Overall Monthly Rank
   
-  func formattedSpeedRank(from array: [[String:String]]) -> [[String:String]] {
+  func formattedRank(from array: [[String:String]]) -> [[String:String]] {
     
-    let speedSongsTitle = DataRetainer.songs(of: .speed).map { $0.title }
-    let formattedRanks = array.map { mappingSpeedRank(from: $0, withSongTitles: speedSongsTitle) }
+    let songsTitle = DataRetainer.songs(of: songType()).map { $0.title }
+    let formattedRanks = array.map { mappingSpeedRank(from: $0, withSongTitles: songsTitle) }
     
     return formattedRanks
   }
   
   func mappingSpeedRank(from array: [String:String], withSongTitles songTitles: [String]) -> [String:String] {
     
-    guard let playerName = array["Player"],
-      let rank = array["Speed Rank"] else { return [String: String]() }
+    guard let playerName  = array["Player"],
+      let rank            = array[rankColumn()] else { return [String: String]() }
     
     var songTitle = ""
     var songScore = ""
     
     for oneSongTitle in songTitles {
       
-      if let oneSongScore = array[oneSongTitle], songScore != "" {
+      if let oneSongScore = array[oneSongTitle], oneSongScore != "" {
         
         songTitle = oneSongTitle
         songScore = oneSongScore

@@ -56,6 +56,18 @@ class MainMenuViewer: UIViewController {
         DataRetainer.speedMonthlyRank = sortedResult
         print("SPEED LOAD : \(sortedResult)")
       }
+      DatabaseResponseService.JSONResponse(for: .staminaMonthlyRank, genericType: MonthlyRank.self) { result in
+        
+        let sortedResult = result.sorted { $0.rank < $1.rank }
+        DataRetainer.staminaMonthlyRank = sortedResult
+        print("STAMINA LOAD : \(sortedResult)")
+      }
+      DatabaseResponseService.JSONResponse(for: .timingMonthlyRank, genericType: MonthlyRank.self) { result in
+        
+        let sortedResult = result.sorted { $0.rank < $1.rank }
+        DataRetainer.timingMonthlyRank = sortedResult
+        print("TIMING LOAD : \(sortedResult)")
+      }
       print(sortedResult)
     }
     

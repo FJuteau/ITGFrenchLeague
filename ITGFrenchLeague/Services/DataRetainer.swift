@@ -15,6 +15,8 @@ struct DataRetainer {
   static var globalRank         : [GlobalRank]?
   static var overallMonthlyRank : [OverallMonthlyRank]?
   static var speedMonthlyRank   : [MonthlyRank]?
+  static var staminaMonthlyRank : [MonthlyRank]?
+  static var timingMonthlyRank  : [MonthlyRank]?
   
   static func songs(of type: SongType) -> [Song] {
     

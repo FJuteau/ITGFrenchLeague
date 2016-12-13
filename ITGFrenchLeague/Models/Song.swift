@@ -49,7 +49,7 @@ struct SongTypeTool {
     else if string == "Speed" {
       return .speed
     }
-    else if string == "Siming" {
+    else if string == "Timing" {
       return .timing
     }
     return nil
