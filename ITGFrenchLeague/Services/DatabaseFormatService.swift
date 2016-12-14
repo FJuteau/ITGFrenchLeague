@@ -180,12 +180,12 @@ enum TabType {
   func formattedRank(from array: [[String:String]]) -> [[String:String]] {
     
     let songsTitle = DataRetainer.songs(of: songType()).map { $0.title }
-    let formattedRanks = array.map { mappingSpeedRank(from: $0, withSongTitles: songsTitle) }
+    let formattedRanks = array.map { mappingRank(from: $0, withSongTitles: songsTitle) }
     
     return formattedRanks
   }
   
-  func mappingSpeedRank(from array: [String:String], withSongTitles songTitles: [String]) -> [String:String] {
+  func mappingRank(from array: [String:String], withSongTitles songTitles: [String]) -> [String:String] {
     
     guard let playerName  = array["Player"],
       let rank            = array[rankColumn()] else { return [String: String]() }
