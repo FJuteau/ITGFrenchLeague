@@ -16,8 +16,6 @@ class MainMenuViewer: UIViewController {
   @IBOutlet weak var generalRankingButton: UIButton!
   @IBOutlet weak var sendScoreButton: UIButton!
   
-  //let challengeViewer       = ChallengeViewer()
-  let generalRankingViewer  = GeneralRankingViewer()
   let monthlyRankingViewer  = MonthlyRankingViewer()
   
   //MARK: - Life cycle
@@ -91,8 +89,6 @@ class MainMenuViewer: UIViewController {
   
   
   func didTapOnGeneralRankingButton() {
-    print("ALLO 3")
-    self.present(generalRankingViewer, animated:true, completion:nil)
   }
   
   

@@ -35,4 +35,9 @@ struct DataRetainer {
     
     return [speedSongs, staminaSongs, timingSongs]
   }
+  
+  static func player(forName name: String) -> Player? {
+    
+    return players?[name]
+  }
 }

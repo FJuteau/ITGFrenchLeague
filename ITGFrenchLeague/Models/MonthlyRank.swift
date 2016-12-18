@@ -12,7 +12,7 @@ struct MonthlyRank: TabModelProtocol {
   
   var playerName  : String
   var rank        : Int
-  var songTitle    : String
+  var songTitle   : String
   var songScore   : String
   
   
