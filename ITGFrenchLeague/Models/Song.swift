@@ -62,6 +62,39 @@ enum SongType {
   case speed
   case stamina
   case timing
+  case unkown
   
+  static func songType(forSection section: Int) -> SongType {
+    
+    switch section {
+    case 0:
+      return speed
+      
+    case 1:
+      return stamina
+    
+    case 2:
+      return timing
+      
+    default:
+      return unkown
+    }
+  }
   
+  func typeTitle() -> String {
+    
+    switch self {
+    case .speed:
+      return "Speed"
+      
+    case .stamina:
+      return "Stamina"
+      
+    case .timing:
+      return "Timing"
+      
+    case .unkown:
+      return "unkown"
+    }
+  }
 }

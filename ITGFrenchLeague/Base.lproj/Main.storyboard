@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="159" id="Lmy-gL-0mB" customClass="ChallengeTableViewCell" customModule="ITGFrenchLeague" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChallengerCellID" rowHeight="159" id="Lmy-gL-0mB" customClass="ChallengeTableViewCell" customModule="ITGFrenchLeague" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="159"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lmy-gL-0mB" id="jbq-dF-acD">
@@ -153,8 +153,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="levelLabel" destination="ACs-Xr-r0R" id="HSO-CQ-1Pb"/>
-                                    <outlet property="levelView" destination="ACs-Xr-r0R" id="USK-p4-QEP"/>
+                                    <outlet property="levelLabel" destination="WxE-qC-ZQF" id="8lt-CZ-aOu"/>
+                                    <outlet property="levelView" destination="ACs-Xr-r0R" id="ZDB-x9-G56"/>
                                     <outlet property="songBannerImageView" destination="Dwu-No-dEQ" id="r5I-oQ-87y"/>
                                     <outlet property="songInfoLabel" destination="LLV-SD-Qix" id="ha5-Ro-Ye1"/>
                                     <outlet property="songTitleLabel" destination="Z0U-Wn-n4P" id="X8I-yt-8Sm"/>

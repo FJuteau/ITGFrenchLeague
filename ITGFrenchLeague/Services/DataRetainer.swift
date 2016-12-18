@@ -20,6 +20,19 @@ struct DataRetainer {
   
   static func songs(of type: SongType) -> [Song] {
     
-    return (songs?.filter { $0.type == type })!
+    if let songs = songs {
+      
+      return songs.filter { $0.type == type }
+    }
+    return [Song]()
+  }
+  
+  static func typeSortedSongs() -> [[Song]] {
+    
+    let speedSongs = songs(of: .speed)
+    let staminaSongs = songs(of: .stamina)
+    let timingSongs = songs(of: .timing)
+    
+    return [speedSongs, staminaSongs, timingSongs]
   }
 }

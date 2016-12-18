@@ -16,18 +16,18 @@ class MainMenuViewer: UIViewController {
   @IBOutlet weak var generalRankingButton: UIButton!
   @IBOutlet weak var sendScoreButton: UIButton!
   
-  let challengeViewer       = ChallengeViewer()
+  //let challengeViewer       = ChallengeViewer()
   let generalRankingViewer  = GeneralRankingViewer()
   let monthlyRankingViewer  = MonthlyRankingViewer()
   
   //MARK: - Life cycle
   
   override func viewDidLoad() {
-    challengeButton.addTarget(self, action: #selector(didTapOnChallengeButton), for: .touchUpInside)
+    /*challengeButton.addTarget(self, action: #selector(didTapOnChallengeButton), for: .touchUpInside)
     monthlyRankingButton.addTarget(self, action: #selector(didTapOnMonthlyRankingButton), for: .touchUpInside)
     generalRankingButton.addTarget(self, action: #selector(didTapOnGeneralRankingButton), for: .touchUpInside)
     sendScoreButton.addTarget(self, action: #selector(didTapOnSendScoreButton), for: .touchUpInside)
-    
+    */
     
     DatabaseResponseService.JSONResponse(for: .players, genericType: Player.self) { result in
       
@@ -78,7 +78,7 @@ class MainMenuViewer: UIViewController {
   
   func didTapOnChallengeButton() {
     print("ALLO 1")
-    self.present(challengeViewer, animated:true, completion:nil)
+    //self.present(challengeViewer, animated:true, completion:nil)
     
   }
   

@@ -27,6 +27,7 @@
 		42D1C4E41DFF506A00097770 /* OverallMonthlyRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4E31DFF506A00097770 /* OverallMonthlyRank.swift */; };
 		42D1C4E61E0201E200097770 /* ChallengeTableViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4E51E0201E200097770 /* ChallengeTableViewer.swift */; };
 		42D1C4EA1E02054200097770 /* ChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4E91E02054200097770 /* ChallengeTableViewCell.swift */; };
+		42D1C4EC1E069F5900097770 /* ChallengerTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4EB1E069F5900097770 /* ChallengerTableViewCellViewModel.swift */; };
 		A52C7091AA70CF3B12811472 /* Pods_ITGFrenchLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946B3ECEB60E0B052EF257F8 /* Pods_ITGFrenchLeague.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		42D1C4E31DFF506A00097770 /* OverallMonthlyRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverallMonthlyRank.swift; sourceTree = "<group>"; };
 		42D1C4E51E0201E200097770 /* ChallengeTableViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewer.swift; sourceTree = "<group>"; };
 		42D1C4E91E02054200097770 /* ChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewCell.swift; sourceTree = "<group>"; };
+		42D1C4EB1E069F5900097770 /* ChallengerTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengerTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		44AF0CCF6A2C388CDA722F3D /* Pods-ITGFrenchLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.debug.xcconfig"; sourceTree = "<group>"; };
 		5BAC9242AD03B1568EBE6075 /* Pods-ITGFrenchLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITGFrenchLeague.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITGFrenchLeague/Pods-ITGFrenchLeague.release.xcconfig"; sourceTree = "<group>"; };
 		946B3ECEB60E0B052EF257F8 /* Pods_ITGFrenchLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITGFrenchLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 			children = (
 				42D1C4E51E0201E200097770 /* ChallengeTableViewer.swift */,
 				42D1C4E91E02054200097770 /* ChallengeTableViewCell.swift */,
+				42D1C4EB1E069F5900097770 /* ChallengerTableViewCellViewModel.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				0F7EA3581D5E11F0000A9362 /* Song.swift in Sources */,
 				42D1C4E41DFF506A00097770 /* OverallMonthlyRank.swift in Sources */,
 				0F7EA34C1D5B65CE000A9362 /* DatabaseResponseService.swift in Sources */,
+				42D1C4EC1E069F5900097770 /* ChallengerTableViewCellViewModel.swift in Sources */,
 				42D1C4E01DFEF99B00097770 /* GlobalRank.swift in Sources */,
 				0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */,
 				42D1C4DE1DFC604500097770 /* DataRetainer.swift in Sources */,

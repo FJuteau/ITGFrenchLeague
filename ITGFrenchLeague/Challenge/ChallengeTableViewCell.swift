@@ -13,8 +13,14 @@ class ChallengeTableViewCell: UITableViewCell {
   
   @IBOutlet weak var songBannerImageView: UIImageView!
   @IBOutlet weak var levelView: UIView!
-  @IBOutlet weak var levelLabel: UIView!
+  @IBOutlet weak var levelLabel: UILabel!
   @IBOutlet weak var songTitleLabel: UILabel!
   @IBOutlet weak var songInfoLabel: UILabel!
   
+  func configure(with viewModel: ChallengerTableViewCellViewModel) {
+    
+    levelLabel.text = viewModel.levelText
+    songTitleLabel.text = viewModel.songTitle
+    songInfoLabel.text = viewModel.songInfoText
+  }
 }
