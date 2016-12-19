@@ -8,14 +8,14 @@
 
 import UIKit
 
-class GeneralRankingTableView: UITableViewController {
+class GeneralRankingTableViewer: UITableViewController {
   
   let data = DataRetainer.overallMonthlyRank
 }
 
 // MARK : Table View Delegate
 
-extension GeneralRankingTableView {
+extension GeneralRankingTableViewer {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     

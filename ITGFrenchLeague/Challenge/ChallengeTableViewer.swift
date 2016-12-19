@@ -11,7 +11,7 @@ import UIKit
 
 class ChallengeTableViewer: UITableViewController {
   
-  let data = DataRetainer.typeSortedSongs()
+  let data = DataRetainer.typeSortedSongs
   
 }
 

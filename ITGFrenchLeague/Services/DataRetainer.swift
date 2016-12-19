@@ -27,13 +27,55 @@ struct DataRetainer {
     return [Song]()
   }
   
-  static func typeSortedSongs() -> [[Song]] {
+  static func songNames(for type: SongType) -> [String] {
+    
+    let sortedSongs = typeSortedSongs[type.typeSection()]
+    
+    return sortedSongs.map { $0.title }
+  }
+  
+  static var typeSortedSongs: [[Song]] {
     
     let speedSongs = songs(of: .speed)
     let staminaSongs = songs(of: .stamina)
     let timingSongs = songs(of: .timing)
     
     return [speedSongs, staminaSongs, timingSongs]
+  }
+  
+  static var songSortedSpeedRank: [[MonthlyRank]] {
+    
+    guard let speedMonthlyRank = speedMonthlyRank else { return [[MonthlyRank]]() }
+    
+    return songSortedMonthlyRank(for: .speed, from: speedMonthlyRank)
+  }
+  
+  static var songSortedStaminaRank: [[MonthlyRank]] {
+    
+    guard let staminaMonthlyRank = staminaMonthlyRank else { return [[MonthlyRank]]() }
+    
+    return songSortedMonthlyRank(for: .stamina, from: staminaMonthlyRank)
+  }
+  
+  static var songSortedTimingRank: [[MonthlyRank]] {
+    
+    guard let timingMonthlyRank = timingMonthlyRank else { return [[MonthlyRank]]() }
+    
+    return songSortedMonthlyRank(for: .timing, from: timingMonthlyRank)
+  }
+  
+  private static func songSortedMonthlyRank(for type: SongType, from monthlyRanks: [MonthlyRank]) -> [[MonthlyRank]] {
+    
+    let songNames = self.songNames(for: type)
+    var songSortedRank = [[MonthlyRank]]()
+    
+    for song in songNames {
+      
+      let songRanks = monthlyRanks.filter { $0.songTitle == song }
+      songSortedRank.append(songRanks)
+    }
+    
+    return songSortedRank
   }
   
   static func player(forName name: String) -> Player? {
