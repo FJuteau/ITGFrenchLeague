@@ -20,7 +20,14 @@ class MainMenuViewer: UIViewController {
   //MARK: - Life cycle
   
   override func viewDidLoad() {
-    
+    /*for family: String in UIFont.familyNames
+    {
+      print("\(family)")
+      for names: String in UIFont.fontNames(forFamilyName: family)
+      {
+        print("== \(names)")
+      }
+    }*/
     DatabaseResponseService.JSONResponse(for: .players, genericType: Player.self) { result in
       
       let players = [String: Player](elements:result.map { ($0.name, $0) })

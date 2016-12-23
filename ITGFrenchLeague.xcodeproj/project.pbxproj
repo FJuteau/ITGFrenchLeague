@@ -28,6 +28,12 @@
 		429E2BE81E08A1E200673574 /* MonthlyRankingTableViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BE71E08A1E200673574 /* MonthlyRankingTableViewer.swift */; };
 		429E2BEA1E08A2BF00673574 /* StaminaRankingTableViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BE91E08A2BF00673574 /* StaminaRankingTableViewer.swift */; };
 		429E2BEC1E08A2ED00673574 /* TimingRankingTableViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BEB1E08A2ED00673574 /* TimingRankingTableViewer.swift */; };
+		429E2BF11E0DAC8100673574 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BF01E0DAC8100673574 /* MenuButton.swift */; };
+		429E2BF31E0DAEE700673574 /* UIColor+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BF21E0DAEE700673574 /* UIColor+AppColor.swift */; };
+		429E2BF81E0DC29500673574 /* buchanan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429E2BF51E0DC20B00673574 /* buchanan.ttf */; };
+		429E2BF91E0DC29500673574 /* LinLibertine_R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429E2BF71E0DC26800673574 /* LinLibertine_R.ttf */; };
+		429E2BFA1E0DC29500673574 /* LinLibertine_RB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429E2BF61E0DC21700673574 /* LinLibertine_RB.ttf */; };
+		429E2BFC1E0DC34600673574 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BFB1E0DC34600673574 /* UIFont+AppFont.swift */; };
 		42D1C4DE1DFC604500097770 /* DataRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4DD1DFC604500097770 /* DataRetainer.swift */; };
 		42D1C4E01DFEF99B00097770 /* GlobalRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4DF1DFEF99B00097770 /* GlobalRank.swift */; };
 		42D1C4E21DFF4C8B00097770 /* MonthlyRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4E11DFF4C8B00097770 /* MonthlyRank.swift */; };
@@ -83,6 +89,13 @@
 		429E2BE71E08A1E200673574 /* MonthlyRankingTableViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyRankingTableViewer.swift; sourceTree = "<group>"; };
 		429E2BE91E08A2BF00673574 /* StaminaRankingTableViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaminaRankingTableViewer.swift; sourceTree = "<group>"; };
 		429E2BEB1E08A2ED00673574 /* TimingRankingTableViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingRankingTableViewer.swift; sourceTree = "<group>"; };
+		429E2BF01E0DAC8100673574 /* MenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		429E2BF21E0DAEE700673574 /* UIColor+AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColor.swift"; sourceTree = "<group>"; };
+		429E2BF51E0DC20B00673574 /* buchanan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = buchanan.ttf; sourceTree = "<group>"; };
+		429E2BF61E0DC21700673574 /* LinLibertine_RB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LinLibertine_RB.ttf; sourceTree = "<group>"; };
+		429E2BF71E0DC26800673574 /* LinLibertine_R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LinLibertine_R.ttf; sourceTree = "<group>"; };
+		429E2BFB1E0DC34600673574 /* UIFont+AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFont.swift"; sourceTree = "<group>"; };
+		429E2BFD1E0DEB8600673574 /* ITGFrenchLeague-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ITGFrenchLeague-Bridging-Header.h"; sourceTree = "<group>"; };
 		42D1C4DD1DFC604500097770 /* DataRetainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRetainer.swift; sourceTree = "<group>"; };
 		42D1C4DF1DFEF99B00097770 /* GlobalRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalRank.swift; sourceTree = "<group>"; };
 		42D1C4E11DFF4C8B00097770 /* MonthlyRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyRank.swift; sourceTree = "<group>"; };
@@ -154,9 +167,12 @@
 				0F7EA33F1D59D1F0000A9362 /* SendScore */,
 				0F7EA34A1D5B63EF000A9362 /* Services */,
 				0F7EA34D1D5B69E5000A9362 /* Models */,
+				429E2BF41E0DC1E900673574 /* Ressources */,
+				429E2BED1E0DABC700673574 /* Commons */,
 				0F7EA3121D59CCE0000A9362 /* Assets.xcassets */,
 				0F7EA3141D59CCE0000A9362 /* LaunchScreen.storyboard */,
 				0F7EA3171D59CCE0000A9362 /* Info.plist */,
+				429E2BFD1E0DEB8600673574 /* ITGFrenchLeague-Bridging-Header.h */,
 			);
 			path = ITGFrenchLeague;
 			sourceTree = "<group>";
@@ -249,6 +265,27 @@
 				42D1C4E31DFF506A00097770 /* OverallMonthlyRank.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		429E2BED1E0DABC700673574 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				429E2BF01E0DAC8100673574 /* MenuButton.swift */,
+				429E2BF21E0DAEE700673574 /* UIColor+AppColor.swift */,
+				429E2BFB1E0DC34600673574 /* UIFont+AppFont.swift */,
+			);
+			name = Commons;
+			path = ITGFrenchLeague/Commons;
+			sourceTree = SOURCE_ROOT;
+		};
+		429E2BF41E0DC1E900673574 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				429E2BF51E0DC20B00673574 /* buchanan.ttf */,
+				429E2BF71E0DC26800673574 /* LinLibertine_R.ttf */,
+				429E2BF61E0DC21700673574 /* LinLibertine_RB.ttf */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 		4DB8B58DE9714F31C00B0DC3 /* Frameworks */ = {
@@ -375,6 +412,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				429E2BF81E0DC29500673574 /* buchanan.ttf in Resources */,
+				429E2BF91E0DC29500673574 /* LinLibertine_R.ttf in Resources */,
+				429E2BFA1E0DC29500673574 /* LinLibertine_RB.ttf in Resources */,
 				0F7EA3161D59CCE0000A9362 /* LaunchScreen.storyboard in Resources */,
 				0F7EA3131D59CCE0000A9362 /* Assets.xcassets in Resources */,
 				0F7EA3111D59CCE0000A9362 /* Main.storyboard in Resources */,
@@ -457,6 +497,7 @@
 				0F7EA3581D5E11F0000A9362 /* Song.swift in Sources */,
 				429E2BEA1E08A2BF00673574 /* StaminaRankingTableViewer.swift in Sources */,
 				429E2BE61E07476000673574 /* RankingTableViewModel.swift in Sources */,
+				429E2BFC1E0DC34600673574 /* UIFont+AppFont.swift in Sources */,
 				42D1C4E41DFF506A00097770 /* OverallMonthlyRank.swift in Sources */,
 				429E2BDE1E07466800673574 /* SpeedRankingTableViewer.swift in Sources */,
 				0F7EA34C1D5B65CE000A9362 /* DatabaseResponseService.swift in Sources */,
@@ -464,12 +505,14 @@
 				42D1C4E01DFEF99B00097770 /* GlobalRank.swift in Sources */,
 				0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */,
 				42D1C4DE1DFC604500097770 /* DataRetainer.swift in Sources */,
+				429E2BF31E0DAEE700673574 /* UIColor+AppColor.swift in Sources */,
 				42D1C4E61E0201E200097770 /* ChallengeTableViewer.swift in Sources */,
 				42D1C4EA1E02054200097770 /* ChallengeTableViewCell.swift in Sources */,
 				0F7EA30C1D59CCE0000A9362 /* AppDelegate.swift in Sources */,
 				429E2BDA1E06D80500673574 /* GeneralRankingTableViewCell.swift in Sources */,
 				429E2BEC1E08A2ED00673574 /* TimingRankingTableViewer.swift in Sources */,
 				429E2BD81E06D7F700673574 /* GeneralRankingTableViewer.swift in Sources */,
+				429E2BF11E0DAC8100673574 /* MenuButton.swift in Sources */,
 				42D1C4E21DFF4C8B00097770 /* MonthlyRank.swift in Sources */,
 				0F7EA3421D59D5AA000A9362 /* MainMenuViewer.swift in Sources */,
 				0F7EA3541D5DD37A000A9362 /* TabModelProtocol.swift in Sources */,
@@ -631,7 +674,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ITGFrenchLeague/ITGFrenchLeague-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -647,7 +690,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ITGFrenchLeague/ITGFrenchLeague-Bridging-Header.h";
 			};
 			name = Release;
 		};
