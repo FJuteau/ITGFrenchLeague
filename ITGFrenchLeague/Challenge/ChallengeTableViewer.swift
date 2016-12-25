@@ -13,6 +13,10 @@ class ChallengeTableViewer: UITableViewController {
   
   let data = DataRetainer.typeSortedSongs
   
+  override func viewDidLoad() {
+    
+    self.tableView.backgroundColor = UIColor.black
+  }
 }
 
 // MARK : Table View Delegate 
@@ -21,7 +25,7 @@ extension ChallengeTableViewer {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-      return data[section].count
+    return data[section].count
   }
   
   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -47,4 +51,22 @@ extension ChallengeTableViewer {
   override func numberOfSections(in tableView: UITableView) -> Int {
     return data.count
   }
+  
+  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "ChallengeSectionViewCellID") as? ChallengeSectionViewCell {
+      
+      let songType = SongType.songType(forSection: section)
+      cell.titleLabel.text = songType.typeTitle()
+      
+      return cell
+    }
+    return nil
+  }
+  
+  override func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+    
+    return 60
+  }
+  
 }

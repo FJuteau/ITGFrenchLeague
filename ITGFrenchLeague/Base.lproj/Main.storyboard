@@ -114,7 +114,7 @@
         <scene sceneID="TIz-MX-faG">
             <objects>
                 <tableViewController id="6tk-aS-kLQ" customClass="ChallengeTableViewer" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="161" sectionHeaderHeight="28" sectionFooterHeight="28" id="hvA-oQ-HKo">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="161" sectionHeaderHeight="28" sectionFooterHeight="28" id="hvA-oQ-HKo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,7 +123,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="161"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lmy-gL-0mB" id="jbq-dF-acD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dwu-No-dEQ">
@@ -193,6 +193,37 @@
                                     <outlet property="songBannerImageView" destination="Dwu-No-dEQ" id="r5I-oQ-87y"/>
                                     <outlet property="songInfoLabel" destination="LLV-SD-Qix" id="ha5-Ro-Ye1"/>
                                     <outlet property="songTitleLabel" destination="Z0U-Wn-n4P" id="X8I-yt-8Sm"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChallengeSectionViewCellID" rowHeight="48" id="nne-t4-6ez" customClass="ChallengeSectionViewCell" customModule="ITGFrenchLeague" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="189" width="375" height="48"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nne-t4-6ez" id="ZZ3-AJ-HQo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ykd-b8-kh9">
+                                            <rect key="frame" x="-2" y="0.0" width="379" height="47.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0K-i2-2tv">
+                                            <rect key="frame" x="28" y="13.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="M0K-i2-2tv" firstAttribute="centerY" secondItem="ZZ3-AJ-HQo" secondAttribute="centerY" id="3du-pd-2O0"/>
+                                        <constraint firstItem="Ykd-b8-kh9" firstAttribute="leading" secondItem="ZZ3-AJ-HQo" secondAttribute="leading" constant="-2" id="K7I-PA-Xf3"/>
+                                        <constraint firstItem="M0K-i2-2tv" firstAttribute="leading" secondItem="ZZ3-AJ-HQo" secondAttribute="leadingMargin" constant="20" id="L41-0q-rmA"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ykd-b8-kh9" secondAttribute="bottom" id="WiK-qS-N44"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ykd-b8-kh9" secondAttribute="trailing" constant="-2" id="bTZ-Va-at1"/>
+                                        <constraint firstItem="Ykd-b8-kh9" firstAttribute="top" secondItem="ZZ3-AJ-HQo" secondAttribute="top" id="iFb-ad-Srg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="backgroundImageView" destination="Ykd-b8-kh9" id="gsc-8g-jb3"/>
+                                    <outlet property="titleLabel" destination="M0K-i2-2tv" id="3b4-Br-Vdk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
