@@ -11,6 +11,11 @@ import UIKit
 class GeneralRankingTableViewer: UITableViewController {
   
   let data = DataRetainer.overallMonthlyRank
+  
+  override func viewDidLoad() {
+    
+    self.tableView.backgroundColor = UIColor.black
+  }
 }
 
 // MARK : Table View Delegate

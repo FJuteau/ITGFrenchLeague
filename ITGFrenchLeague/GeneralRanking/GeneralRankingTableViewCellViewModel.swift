@@ -19,7 +19,7 @@ struct GeneralRankingTableViewCellViewModel {
   
   init(with overallRank: OverallMonthlyRank) {
     
-    overallRankingText = String(overallRank.rank)
+    overallRankingText = "\(overallRank.rank)."
     playerNameText     = overallRank.playerName
     speedRankingText   = String(overallRank.speedRank)
     staminaRankingText = String(overallRank.staminaRank)
