@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class StaminaRankingTableViewer: RankingRankingTableViewer {
+class StaminaRankingTableViewer: MonthlyRankingTableViewer {
   
   override var data: [[MonthlyRank]] {
     

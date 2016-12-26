@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimingRankingTableViewer: RankingRankingTableViewer {
+class TimingRankingTableViewer: MonthlyRankingTableViewer {
   
   override var data: [[MonthlyRank]] {
     

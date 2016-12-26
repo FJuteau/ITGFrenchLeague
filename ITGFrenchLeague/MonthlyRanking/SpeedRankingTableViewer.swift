@@ -8,12 +8,13 @@
 
 import UIKit
 
-class SpeedRankingTableViewer: RankingRankingTableViewer {
+class SpeedRankingTableViewer: MonthlyRankingTableViewer {
  
   override var data: [[MonthlyRank]] {
     
     return DataRetainer.songSortedSpeedRank
   }
+  
 }
 
 // MARK : Table View Delegate

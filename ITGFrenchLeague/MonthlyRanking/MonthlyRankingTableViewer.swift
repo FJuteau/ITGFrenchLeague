@@ -8,18 +8,23 @@
 
 import UIKit
 
-class RankingRankingTableViewer: UITableViewController {
+class MonthlyRankingTableViewer: UITableViewController {
   
   var data: [[MonthlyRank]] {
     
     return DataRetainer.songSortedSpeedRank
   }
   
+  override func viewDidLoad() {
+    
+    self.tableView.backgroundColor = UIColor.black
+  }
+  
 }
 
 // MARK : Table View Delegate
 
-extension RankingRankingTableViewer {
+extension MonthlyRankingTableViewer {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
