@@ -18,6 +18,7 @@ class MonthlyRankingTableViewer: UITableViewController {
   override func viewDidLoad() {
     
     self.tableView.backgroundColor = UIColor.black
+    self.tableView.register(UINib(nibName: "RankingTableViewCell", bundle: nil), forCellReuseIdentifier: "RankingCellID")
   }
   
 }
@@ -48,4 +49,5 @@ extension MonthlyRankingTableViewer {
   override func numberOfSections(in tableView: UITableView) -> Int {
     return data.count
   }
+  
 }

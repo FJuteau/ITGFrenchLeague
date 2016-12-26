@@ -40,5 +40,13 @@ class RankingTableViewCell: UITableViewCell {
     rankLabel.text        = viewModel.rankText
     playerNameLabel.text  = viewModel.playerNameText
     scoreLabel.text       = viewModel.scoreText
+    
+    let iconURL = URL(string: viewModel.playerImageUrl)
+    playerImageView.sd_setImage(with: iconURL, completed: { image, error, cacheType, imageURL in
+      
+      if let error = error {
+        print("URL ERROR : \(error)")
+      }
+    })
   }
 }

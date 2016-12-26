@@ -71,11 +71,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
-                <outlet property="backgroundImageView" destination="lGq-RN-YN8" id="L9L-Yw-uZe"/>
-                <outlet property="playerImageView" destination="SjU-15-scW" id="Pem-pJ-gZP"/>
-                <outlet property="playerNameLabel" destination="xYe-0u-YjW" id="Ozw-uA-w7F"/>
-                <outlet property="rankLabel" destination="NIX-PP-tPL" id="sB1-CA-ubQ"/>
-                <outlet property="scoreLabel" destination="EkP-jV-tt6" id="0iu-ZL-prF"/>
+                <outlet property="backgroundImageView" destination="lGq-RN-YN8" id="q9e-Hr-lJZ"/>
+                <outlet property="playerImageView" destination="SjU-15-scW" id="34Y-9R-yjG"/>
+                <outlet property="playerNameLabel" destination="xYe-0u-YjW" id="2jR-pS-vB4"/>
+                <outlet property="rankLabel" destination="NIX-PP-tPL" id="Q4x-er-b7X"/>
+                <outlet property="scoreLabel" destination="EkP-jV-tt6" id="cWP-gi-Z21"/>
             </connections>
         </tableViewCell>
     </objects>
