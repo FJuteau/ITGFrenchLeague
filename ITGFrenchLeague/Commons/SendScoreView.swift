@@ -10,6 +10,7 @@ import UIKit
 
 class SendScoreView: UIView {
   
+  typealias Const = SendScoreViewConstants
   @IBOutlet weak var titleLabel: UILabel!
   
   @IBOutlet weak var pseudoLabel: UILabel!
@@ -28,29 +29,35 @@ class SendScoreView: UIView {
   
   override func awakeFromNib() {
     
-    titleLabel.textColor      = Constants.labelTextColor
-    titleLabel.font           = Constants.titleFont
+    titleLabel.textColor      = Const.labelTextColor
+    titleLabel.font           = Const.titleFont
     
-    pseudoLabel.textColor     = Constants.labelTextColor
-    pseudoLabel.font          = Constants.labelFont
+    pseudoLabel.textColor     = Const.labelTextColor
+    pseudoLabel.font          = Const.labelFont
     
-    submitSongLabel.textColor = Constants.labelTextColor
-    submitSongLabel.font      = Constants.labelFont
+    submitSongLabel.textColor = Const.labelTextColor
+    submitSongLabel.font      = Const.labelFont
     
-    scoreLabel.textColor      = Constants.labelTextColor
-    scoreLabel.font           = Constants.labelFont
+    scoreLabel.textColor      = Const.labelTextColor
+    scoreLabel.font           = Const.labelFont
     
-    screenshotLabel.textColor = Constants.labelTextColor
-    screenshotLabel.font      = Constants.labelFont
+    screenshotLabel.textColor = Const.labelTextColor
+    screenshotLabel.font      = Const.labelFont
     
     submitButton.isEnabled = false
+    
+    playerNameTextFieldView.textField.tag = Const.playerNameTextFieldViewTag
+    scoreTextFieldView.textField.tag      = Const.scoreTextFieldViewTag
   }
 }
 
-struct Constants {
+struct SendScoreViewConstants {
   
   static let labelTextColor = UIColor.mainText
   static let labelFont = UIFont.main(with: 20)
   
   static let titleFont = UIFont.mainBold(with: 25)
+  
+  static let playerNameTextFieldViewTag = 0
+  static let scoreTextFieldViewTag = 1
 }

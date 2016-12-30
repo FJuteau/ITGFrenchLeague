@@ -52,6 +52,7 @@
 		B877379F1E1661F0006495A6 /* CommonTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877379E1E1661F0006495A6 /* CommonTextFieldView.swift */; };
 		B87737A11E166645006495A6 /* SendScoreViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87737A01E166645006495A6 /* SendScoreViewer.swift */; };
 		B87737A31E16676B006495A6 /* SendScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87737A21E16676B006495A6 /* SendScoreView.swift */; };
+		B87737A91E16A70C006495A6 /* SongPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87737A81E16A70C006495A6 /* SongPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		B877379E1E1661F0006495A6 /* CommonTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTextFieldView.swift; sourceTree = "<group>"; };
 		B87737A01E166645006495A6 /* SendScoreViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendScoreViewer.swift; path = ITGFrenchLeague/Commons/SendScoreViewer.swift; sourceTree = SOURCE_ROOT; };
 		B87737A21E16676B006495A6 /* SendScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendScoreView.swift; path = ITGFrenchLeague/Commons/SendScoreView.swift; sourceTree = SOURCE_ROOT; };
+		B87737A81E16A70C006495A6 /* SongPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +302,7 @@
 				429E2BFB1E0DC34600673574 /* UIFont+AppFont.swift */,
 				B877379C1E156E2B006495A6 /* CommonTextFieldView.xib */,
 				B877379E1E1661F0006495A6 /* CommonTextFieldView.swift */,
+				B87737A81E16A70C006495A6 /* SongPickerView.swift */,
 			);
 			name = Commons;
 			path = ITGFrenchLeague/Commons;
@@ -539,6 +542,7 @@
 				429E2BE41E07475200673574 /* RankingTableViewCell.swift in Sources */,
 				B87737971E155E39006495A6 /* GlobalRankingTableViewCell.swift in Sources */,
 				0F7EA3581D5E11F0000A9362 /* Song.swift in Sources */,
+				B87737A91E16A70C006495A6 /* SongPickerView.swift in Sources */,
 				429E2BEA1E08A2BF00673574 /* StaminaRankingTableViewer.swift in Sources */,
 				429E2BE61E07476000673574 /* RankingTableViewModel.swift in Sources */,
 				429E2BFC1E0DC34600673574 /* UIFont+AppFont.swift in Sources */,

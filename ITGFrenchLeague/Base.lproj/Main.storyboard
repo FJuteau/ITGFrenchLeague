@@ -388,6 +388,9 @@
                                 <state key="normal" title="Sélectionner">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectSongButtonWithSender:" destination="0SP-KW-IL2" eventType="touchUpInside" id="Bme-g3-Ubs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score (optionnel)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-CX-DHf">
                                 <rect key="frame" x="121.5" y="319" width="132" height="21"/>
