@@ -51,17 +51,13 @@ enum TabType {
   func formattedJSONResponse(entryArray: [[String:String]]) -> [[String:String]] {
     
     switch self {
-    case .players:
+    case .players,
+         .globalRank,
+         .overallMonthlyRank:
       return entryArray
       
     case .songInfo:
       return formattedSongInfo(from: entryArray)
-      
-    case .globalRank:
-      return entryArray
-      
-    case .overallMonthlyRank:
-      return entryArray
       
     case .speedMonthlyRank,
          .staminaMonthlyRank,

@@ -50,4 +50,18 @@ extension MonthlyRankingTableViewer {
     return data.count
   }
   
+  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    
+    let titleLabel = UILabel(frame: CGRect(x: 20, y: 8, width: tableView.frame.width, height: 20))
+    titleLabel.font = UIFont.main(with: 25)
+    titleLabel.textColor = UIColor.mainText
+    titleLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+    
+    let headerView = UIView()
+    headerView.backgroundColor = UIColor.black
+    headerView.addSubview(titleLabel)
+    
+    return headerView
+  }
+  
 }

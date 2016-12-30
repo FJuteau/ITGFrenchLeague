@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommonTextFieldView" customModule="ITGFrenchLeague" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImageView" destination="Zln-U2-u35" id="Tbu-b8-GQ8"/>
+                <outlet property="textField" destination="oHc-QJ-5r0" id="2Us-vQ-GUI"/>
+                <outlet property="view" destination="iN0-l3-epB" id="I04-IL-8Kx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zln-U2-u35">
+                    <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&lt; Tapez ici... &gt;" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oHc-QJ-5r0">
+                    <rect key="frame" x="40" y="10" width="272" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zln-U2-u35" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0Pl-wB-6nD"/>
+                <constraint firstAttribute="trailing" secondItem="Zln-U2-u35" secondAttribute="trailing" id="8Si-FU-kay"/>
+                <constraint firstAttribute="bottom" secondItem="oHc-QJ-5r0" secondAttribute="bottom" constant="10" id="Khz-3V-cu2"/>
+                <constraint firstAttribute="trailing" secondItem="oHc-QJ-5r0" secondAttribute="trailing" constant="40" id="Kpc-Q0-2CM"/>
+                <constraint firstItem="oHc-QJ-5r0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="X3t-vr-HRd"/>
+                <constraint firstAttribute="bottom" secondItem="Zln-U2-u35" secondAttribute="bottom" id="a6c-kn-SrO"/>
+                <constraint firstItem="Zln-U2-u35" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kVp-SN-198"/>
+                <constraint firstItem="oHc-QJ-5r0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="s4m-u2-Ywr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="22" y="-255"/>
+        </view>
+    </objects>
+</document>

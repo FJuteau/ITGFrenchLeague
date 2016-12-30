@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NV6-tF-6Y0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NV6-tF-6Y0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -73,6 +73,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn7-Ty-ab6" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="149.5" width="223" height="49.5"/>
                                         <state key="normal" title="Envoyer un score"/>
+                                        <connections>
+                                            <segue destination="0SP-KW-IL2" kind="show" id="TUd-mg-y8L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -272,6 +275,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c93-A5-G2e" userLabel="Classement de la saison" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="223" height="49.5"/>
                                         <state key="normal" title="Classement"/>
+                                        <connections>
+                                            <segue destination="pLJ-eM-qJR" kind="show" id="4P4-av-gow"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -322,7 +328,7 @@
         <scene sceneID="N03-oy-JXM">
             <objects>
                 <tableViewController id="TJu-XG-gbf" customClass="StaminaRankingTableViewer" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2gG-yG-G6v">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2gG-yG-G6v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -337,11 +343,171 @@
             </objects>
             <point key="canvasLocation" x="2796" y="125"/>
         </scene>
+        <!--Send Score Viewer-->
+        <scene sceneID="bxi-EM-ef2">
+            <objects>
+                <viewController id="0SP-KW-IL2" customClass="SendScoreViewer" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GAB-tB-7oF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vn7-HU-LKm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smn-ZH-2eo" customClass="SendScoreView" customModule="ITGFrenchLeague" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soumettre un score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugn-KG-Ngq">
+                                <rect key="frame" x="113" y="84" width="150.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wny-Dr-mMt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre pseudo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSF-c8-sbg">
+                                <rect key="frame" x="137" y="125" width="102.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdT-38-Qh2" customClass="CommonTextFieldView" customModule="ITGFrenchLeague" customModuleProvider="target">
+                                <rect key="frame" x="66" y="152" width="243" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CYV-71-p3H"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chanson à soumettre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-sR-UOf">
+                                <rect key="frame" x="105.5" y="222" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jax-21-qqT" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
+                                <rect key="frame" x="66" y="249" width="243" height="50"/>
+                                <state key="normal" title="Sélectionner">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score (optionnel)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-CX-DHf">
+                                <rect key="frame" x="121.5" y="319" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhe-Tg-Dsi" customClass="CommonTextFieldView" customModule="ITGFrenchLeague" customModuleProvider="target">
+                                <rect key="frame" x="66" y="346" width="243" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screenshot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-z3-LEP">
+                                <rect key="frame" x="144" y="416" width="87.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jov-MM-gCM" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
+                                <rect key="frame" x="66" y="443" width="243" height="50"/>
+                                <state key="normal" title="Sélectionner">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openPhotoLibraryButtonWithSender:" destination="0SP-KW-IL2" eventType="touchUpInside" id="GFb-1R-FTv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSA-ci-cxl" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
+                                <rect key="frame" x="65.5" y="597" width="243" height="50"/>
+                                <state key="normal" title="Soumettre">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7gf-z3-LEP" firstAttribute="height" secondItem="Ugn-KG-Ngq" secondAttribute="height" id="17l-lD-SId"/>
+                            <constraint firstItem="BSA-ci-cxl" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="1Ul-g8-jFc"/>
+                            <constraint firstItem="jax-21-qqT" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="2Sn-Cw-EXk"/>
+                            <constraint firstItem="7gf-z3-LEP" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="Bwc-Rt-Sds"/>
+                            <constraint firstItem="KSF-c8-sbg" firstAttribute="height" secondItem="Ugn-KG-Ngq" secondAttribute="height" id="CtI-R0-c7W"/>
+                            <constraint firstItem="ZCg-CX-DHf" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="E1t-NO-c4J"/>
+                            <constraint firstItem="GXI-sR-UOf" firstAttribute="height" secondItem="Ugn-KG-Ngq" secondAttribute="height" id="FMD-uV-7Ie"/>
+                            <constraint firstItem="GXI-sR-UOf" firstAttribute="top" secondItem="jdT-38-Qh2" secondAttribute="bottom" constant="20" id="Ixp-mh-UoF"/>
+                            <constraint firstItem="KSF-c8-sbg" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="Iyp-qU-o3W"/>
+                            <constraint firstItem="ZCg-CX-DHf" firstAttribute="height" secondItem="Ugn-KG-Ngq" secondAttribute="height" id="Jpr-sx-2lx"/>
+                            <constraint firstItem="Xhe-Tg-Dsi" firstAttribute="top" secondItem="ZCg-CX-DHf" secondAttribute="bottom" constant="6" id="OiT-lJ-NBW"/>
+                            <constraint firstItem="jax-21-qqT" firstAttribute="height" secondItem="jdT-38-Qh2" secondAttribute="height" id="PLF-Df-p88"/>
+                            <constraint firstItem="KSF-c8-sbg" firstAttribute="top" secondItem="Ugn-KG-Ngq" secondAttribute="bottom" constant="20" id="TfD-d7-pwf"/>
+                            <constraint firstItem="Xhe-Tg-Dsi" firstAttribute="width" secondItem="jdT-38-Qh2" secondAttribute="width" id="UWR-0J-16w"/>
+                            <constraint firstItem="Ugn-KG-Ngq" firstAttribute="top" secondItem="GAB-tB-7oF" secondAttribute="bottom" constant="20" id="Ulv-N8-vGn"/>
+                            <constraint firstItem="Vn7-HU-LKm" firstAttribute="top" secondItem="BSA-ci-cxl" secondAttribute="bottom" constant="20" id="Une-FM-6KV"/>
+                            <constraint firstItem="BSA-ci-cxl" firstAttribute="width" secondItem="jdT-38-Qh2" secondAttribute="width" id="VWT-5D-493"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jdT-38-Qh2" secondAttribute="trailing" constant="50" id="Xvx-9L-SSt"/>
+                            <constraint firstItem="Xhe-Tg-Dsi" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="Z5V-Ma-j7N"/>
+                            <constraint firstItem="jax-21-qqT" firstAttribute="top" secondItem="GXI-sR-UOf" secondAttribute="bottom" constant="6" id="cJV-5Y-SHs"/>
+                            <constraint firstItem="BSA-ci-cxl" firstAttribute="height" secondItem="jdT-38-Qh2" secondAttribute="height" id="cTh-Mi-sEl"/>
+                            <constraint firstItem="jov-MM-gCM" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="clV-hJ-dUv"/>
+                            <constraint firstItem="GXI-sR-UOf" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="cz6-bM-pJ0"/>
+                            <constraint firstItem="Xhe-Tg-Dsi" firstAttribute="height" secondItem="jdT-38-Qh2" secondAttribute="height" id="czN-wb-xBp"/>
+                            <constraint firstItem="jov-MM-gCM" firstAttribute="width" secondItem="jdT-38-Qh2" secondAttribute="width" id="flf-eH-ora"/>
+                            <constraint firstItem="jax-21-qqT" firstAttribute="width" secondItem="jdT-38-Qh2" secondAttribute="width" id="ivk-Ir-oed"/>
+                            <constraint firstItem="jdT-38-Qh2" firstAttribute="leading" secondItem="smn-ZH-2eo" secondAttribute="leadingMargin" constant="50" id="j38-3c-42w"/>
+                            <constraint firstItem="ZCg-CX-DHf" firstAttribute="top" secondItem="jax-21-qqT" secondAttribute="bottom" constant="20" id="jVW-OR-OJh"/>
+                            <constraint firstItem="Ugn-KG-Ngq" firstAttribute="centerX" secondItem="smn-ZH-2eo" secondAttribute="centerX" id="kbl-6K-Y6o"/>
+                            <constraint firstItem="7gf-z3-LEP" firstAttribute="top" secondItem="Xhe-Tg-Dsi" secondAttribute="bottom" constant="20" id="tqO-Yc-zmN"/>
+                            <constraint firstItem="jdT-38-Qh2" firstAttribute="top" secondItem="KSF-c8-sbg" secondAttribute="bottom" constant="6" id="vpu-Oi-SGk"/>
+                            <constraint firstItem="jov-MM-gCM" firstAttribute="top" secondItem="7gf-z3-LEP" secondAttribute="bottom" constant="6" id="xZs-Qn-AZ4"/>
+                            <constraint firstItem="jov-MM-gCM" firstAttribute="height" secondItem="jdT-38-Qh2" secondAttribute="height" id="y8e-46-aNf"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="playerNameTextFieldView" destination="jdT-38-Qh2" id="HRF-Cu-J0X"/>
+                            <outlet property="pseudoLabel" destination="KSF-c8-sbg" id="ak2-33-PO0"/>
+                            <outlet property="scoreLabel" destination="ZCg-CX-DHf" id="m9b-KC-BIV"/>
+                            <outlet property="scoreTextFieldView" destination="Xhe-Tg-Dsi" id="GDE-AA-imR"/>
+                            <outlet property="screenshotButton" destination="jov-MM-gCM" id="Tal-Nk-whX"/>
+                            <outlet property="screenshotLabel" destination="7gf-z3-LEP" id="bUu-wI-mMh"/>
+                            <outlet property="submitButton" destination="BSA-ci-cxl" id="S0t-Sm-7aB"/>
+                            <outlet property="submitSongButton" destination="jax-21-qqT" id="NQE-fM-1n1"/>
+                            <outlet property="submitSongLabel" destination="GXI-sR-UOf" id="LFQ-yw-TJn"/>
+                            <outlet property="titleLabel" destination="Ugn-KG-Ngq" id="bmc-5r-EdJ"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NyA-Ik-RbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="934.18290854572717"/>
+        </scene>
+        <!--Global Ranking Table Viewer-->
+        <scene sceneID="LcQ-l4-pVD">
+            <objects>
+                <tableViewController id="pLJ-eM-qJR" customClass="GlobalRankingTableViewer" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="O0c-lx-rWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CVQ-DQ-Tx0">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CVQ-DQ-Tx0" id="QB0-BI-JDZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pLJ-eM-qJR" id="G5J-8P-cHo"/>
+                            <outlet property="delegate" destination="pLJ-eM-qJR" id="41R-CH-fSk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTG-IU-qhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="532"/>
+        </scene>
         <!--Timing-->
         <scene sceneID="Nmf-2q-cMb">
             <objects>
                 <tableViewController id="Kub-m1-t8S" customClass="TimingRankingTableViewer" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fB5-vw-vap">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fB5-vw-vap">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
