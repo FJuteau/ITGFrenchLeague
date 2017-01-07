@@ -36,6 +36,11 @@
 		429E2BFC1E0DC34600673574 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BFB1E0DC34600673574 /* UIFont+AppFont.swift */; };
 		429E2C031E1044FC00673574 /* ChallengeSectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2C021E1044FC00673574 /* ChallengeSectionViewCell.swift */; };
 		429E2C051E10773500673574 /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429E2C041E10773500673574 /* RankingTableViewCell.xib */; };
+		42C1DCB31E17B78000FBC93A /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C1DCB21E17B78000FBC93A /* Suggestion.swift */; };
+		42C1DCB51E17BEDC00FBC93A /* SuggestionsTableViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C1DCB41E17BEDC00FBC93A /* SuggestionsTableViewer.swift */; };
+		42C1DCB71E17EAEF00FBC93A /* SuggestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C1DCB61E17EAEF00FBC93A /* SuggestionsTableViewCell.xib */; };
+		42C1DCB91E17EB0B00FBC93A /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C1DCB81E17EB0B00FBC93A /* SuggestionsTableViewCell.swift */; };
+		42C1DCBB1E17EB1E00FBC93A /* SuggestionsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C1DCBA1E17EB1E00FBC93A /* SuggestionsTableViewModel.swift */; };
 		42D1C4DE1DFC604500097770 /* DataRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4DD1DFC604500097770 /* DataRetainer.swift */; };
 		42D1C4E01DFEF99B00097770 /* GlobalRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4DF1DFEF99B00097770 /* GlobalRank.swift */; };
 		42D1C4E21DFF4C8B00097770 /* MonthlyRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C4E11DFF4C8B00097770 /* MonthlyRank.swift */; };
@@ -109,6 +114,11 @@
 		429E2BFD1E0DEB8600673574 /* ITGFrenchLeague-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ITGFrenchLeague-Bridging-Header.h"; sourceTree = "<group>"; };
 		429E2C021E1044FC00673574 /* ChallengeSectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeSectionViewCell.swift; sourceTree = "<group>"; };
 		429E2C041E10773500673574 /* RankingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
+		42C1DCB21E17B78000FBC93A /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		42C1DCB41E17BEDC00FBC93A /* SuggestionsTableViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewer.swift; sourceTree = "<group>"; };
+		42C1DCB61E17EAEF00FBC93A /* SuggestionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionsTableViewCell.xib; sourceTree = "<group>"; };
+		42C1DCB81E17EB0B00FBC93A /* SuggestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewCell.swift; sourceTree = "<group>"; };
+		42C1DCBA1E17EB1E00FBC93A /* SuggestionsTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewModel.swift; sourceTree = "<group>"; };
 		42D1C4DD1DFC604500097770 /* DataRetainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRetainer.swift; sourceTree = "<group>"; };
 		42D1C4DF1DFEF99B00097770 /* GlobalRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalRank.swift; sourceTree = "<group>"; };
 		42D1C4E11DFF4C8B00097770 /* MonthlyRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyRank.swift; sourceTree = "<group>"; };
@@ -187,6 +197,7 @@
 				0F7EA33D1D59D1F0000A9362 /* GeneralRanking */,
 				0F7EA33E1D59D1F0000A9362 /* MonthlyRanking */,
 				B87737911E155E0A006495A6 /* GlobalRanking */,
+				42C1DCB11E17B6C000FBC93A /* Suggestions */,
 				0F7EA33F1D59D1F0000A9362 /* SendScore */,
 				0F7EA34A1D5B63EF000A9362 /* Services */,
 				0F7EA34D1D5B69E5000A9362 /* Models */,
@@ -290,6 +301,7 @@
 				42D1C4DF1DFEF99B00097770 /* GlobalRank.swift */,
 				42D1C4E11DFF4C8B00097770 /* MonthlyRank.swift */,
 				42D1C4E31DFF506A00097770 /* OverallMonthlyRank.swift */,
+				42C1DCB21E17B78000FBC93A /* Suggestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +328,17 @@
 				429E2BF61E0DC21700673574 /* LinLibertine_RB.ttf */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		42C1DCB11E17B6C000FBC93A /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				42C1DCB41E17BEDC00FBC93A /* SuggestionsTableViewer.swift */,
+				42C1DCB61E17EAEF00FBC93A /* SuggestionsTableViewCell.xib */,
+				42C1DCB81E17EB0B00FBC93A /* SuggestionsTableViewCell.swift */,
+				42C1DCBA1E17EB1E00FBC93A /* SuggestionsTableViewModel.swift */,
+			);
+			path = Suggestions;
 			sourceTree = "<group>";
 		};
 		4DB8B58DE9714F31C00B0DC3 /* Frameworks */ = {
@@ -417,6 +440,7 @@
 				TargetAttributes = {
 					0F7EA3071D59CCDF000A9362 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LH3NPG2M8S;
 					};
 					0F7EA31B1D59CCE0000A9362 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -460,6 +484,7 @@
 				0F7EA3161D59CCE0000A9362 /* LaunchScreen.storyboard in Resources */,
 				429E2C051E10773500673574 /* RankingTableViewCell.xib in Resources */,
 				B87737951E155E24006495A6 /* GlobalRankingTableViewCell.xib in Resources */,
+				42C1DCB71E17EAEF00FBC93A /* SuggestionsTableViewCell.xib in Resources */,
 				0F7EA3131D59CCE0000A9362 /* Assets.xcassets in Resources */,
 				0F7EA3111D59CCE0000A9362 /* Main.storyboard in Resources */,
 			);
@@ -551,8 +576,10 @@
 				429E2BDE1E07466800673574 /* SpeedRankingTableViewer.swift in Sources */,
 				0F7EA34C1D5B65CE000A9362 /* DatabaseResponseService.swift in Sources */,
 				42D1C4EC1E069F5900097770 /* ChallengerTableViewCellViewModel.swift in Sources */,
+				42C1DCB91E17EB0B00FBC93A /* SuggestionsTableViewCell.swift in Sources */,
 				42D1C4E01DFEF99B00097770 /* GlobalRank.swift in Sources */,
 				0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */,
+				42C1DCB31E17B78000FBC93A /* Suggestion.swift in Sources */,
 				42D1C4DE1DFC604500097770 /* DataRetainer.swift in Sources */,
 				429E2BF31E0DAEE700673574 /* UIColor+AppColor.swift in Sources */,
 				42D1C4E61E0201E200097770 /* ChallengeTableViewer.swift in Sources */,
@@ -561,6 +588,8 @@
 				429E2BDA1E06D80500673574 /* GeneralRankingTableViewCell.swift in Sources */,
 				429E2BEC1E08A2ED00673574 /* TimingRankingTableViewer.swift in Sources */,
 				B87737991E155E4B006495A6 /* GlobalRankingTableViewModel.swift in Sources */,
+				42C1DCBB1E17EB1E00FBC93A /* SuggestionsTableViewModel.swift in Sources */,
+				42C1DCB51E17BEDC00FBC93A /* SuggestionsTableViewer.swift in Sources */,
 				B87737931E155E0A006495A6 /* GlobalRankingTableViewer.swift in Sources */,
 				429E2BD81E06D7F700673574 /* GeneralRankingTableViewer.swift in Sources */,
 				429E2BF11E0DAC8100673574 /* MenuButton.swift in Sources */,
@@ -722,6 +751,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LH3NPG2M8S;
 				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
@@ -738,6 +768,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LH3NPG2M8S;
 				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;

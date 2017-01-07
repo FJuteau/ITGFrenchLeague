@@ -1,28 +1,27 @@
 //
-//  GeneralRankingTableView.swift
+//  SuggestionsTableViewer.swift
 //  ITGFrenchLeague
 //
-//  Created by François Juteau on 18/12/2016.
+//  Created by François Juteau on 31/12/2016.
 //  Copyright © 2016 Fjuteau. All rights reserved.
 //
 
 import UIKit
 
-class GeneralRankingTableViewer: UITableViewController {
+class SuggestionsTableViewer: UITableViewController {
   
-  let data = DataRetainer.overallMonthlyRank
+  let data = DataRetainer.suggestions
   
   override func viewDidLoad() {
     
     self.tableView.backgroundColor = UIColor.black
-    /*tabBarController?.tabBar.barTintColor = UIColor.mainColor
-    tabBarController?.tabBar.tintColor = UIColor.mainText*/
+    self.tableView.register(UINib(nibName: "SuggestionsTableViewCell", bundle: nil), forCellReuseIdentifier: "SuggestionsRankingCellID")
   }
 }
 
 // MARK : Table View Delegate
 
-extension GeneralRankingTableViewer {
+extension SuggestionsTableViewer {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
@@ -35,11 +34,11 @@ extension GeneralRankingTableViewer {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRankingCellID") as? GeneralRankingTableViewCell,
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "SuggestionsRankingCellID") as? SuggestionsTableViewCell,
       let data = data {
       
       let ranking = data[indexPath.row]
-      let viewModel = GeneralRankingTableViewCellViewModel(with: ranking)
+      let viewModel = SuggestionsTableViewModel(with: ranking)
       cell.configure(with: viewModel)
       
       return cell

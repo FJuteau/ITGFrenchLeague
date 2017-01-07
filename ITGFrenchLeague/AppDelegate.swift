@@ -13,9 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
-  private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    
+    UIApplication.shared.statusBarStyle = .lightContent
+    
+    UINavigationBar.appearance().tintColor = UIColor.mainText
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.mainText]
+    UINavigationBar.appearance().shadowImage = UIColor.mainText.as1ptImage()
+    UINavigationBar.appearance().setBackgroundImage(UIColor.mainColor.as1ptImage(), for: .default)
+    
+    UITabBar.appearance().tintColor = UIColor.mainText
+    UITabBar.appearance().shadowImage = UIColor.mainText.as1ptImage()
+    UITabBar.appearance().backgroundImage = UIColor.mainColor.as1ptImage()
+    
     return true
   }
 

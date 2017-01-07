@@ -24,6 +24,7 @@ enum TabType {
   case speedMonthlyRank
   case staminaMonthlyRank
   case timingMonthlyRank
+  case suggestions
   
   
   func tabName() -> String {
@@ -44,6 +45,9 @@ enum TabType {
          .staminaMonthlyRank,
          .timingMonthlyRank:
       return "Rank"
+      
+    case .suggestions:
+      return "Suggestions"
     }
   }
   
@@ -53,7 +57,8 @@ enum TabType {
     switch self {
     case .players,
          .globalRank,
-         .overallMonthlyRank:
+         .overallMonthlyRank,
+         .suggestions:
       return entryArray
       
     case .songInfo:
