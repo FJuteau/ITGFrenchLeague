@@ -25,8 +25,24 @@ struct SuggestionsTableViewModel {
     proposePlayerText = suggestion.playerName
     levelText = suggestion.level
     
-    statusText = suggestion.status
+    statusText = StatusParser.status(text: suggestion.status)
     
     likeCountText = "\(suggestion.vote) joueurs aiment ce choix !"
+  }
+  
+}
+
+fileprivate class StatusParser {
+  
+  static func status(text: String) -> String {
+    
+    if text.contains("NOK") || text.contains("NOT") {
+      return "Non conforme"
+    } else if text.contains("OK") {
+      return "Conforme"
+    } else if text.contains("Pending") {
+      return "En attente"
+    }
+    return text
   }
 }
