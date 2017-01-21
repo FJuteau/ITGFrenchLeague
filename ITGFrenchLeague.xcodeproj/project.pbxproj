@@ -36,6 +36,7 @@
 		429E2BFC1E0DC34600673574 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BFB1E0DC34600673574 /* UIFont+AppFont.swift */; };
 		429E2C031E1044FC00673574 /* ChallengeSectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2C021E1044FC00673574 /* ChallengeSectionViewCell.swift */; };
 		429E2C051E10773500673574 /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429E2C041E10773500673574 /* RankingTableViewCell.xib */; };
+		429FBE2D1E339C570087F20E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429FBE2C1E339C570087F20E /* LoadingViewController.swift */; };
 		42C1DCB31E17B78000FBC93A /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C1DCB21E17B78000FBC93A /* Suggestion.swift */; };
 		42C1DCB51E17BEDC00FBC93A /* SuggestionsTableViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C1DCB41E17BEDC00FBC93A /* SuggestionsTableViewer.swift */; };
 		42C1DCB71E17EAEF00FBC93A /* SuggestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C1DCB61E17EAEF00FBC93A /* SuggestionsTableViewCell.xib */; };
@@ -114,6 +115,7 @@
 		429E2BFD1E0DEB8600673574 /* ITGFrenchLeague-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ITGFrenchLeague-Bridging-Header.h"; sourceTree = "<group>"; };
 		429E2C021E1044FC00673574 /* ChallengeSectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeSectionViewCell.swift; sourceTree = "<group>"; };
 		429E2C041E10773500673574 /* RankingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
+		429FBE2C1E339C570087F20E /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		42C1DCB21E17B78000FBC93A /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		42C1DCB41E17BEDC00FBC93A /* SuggestionsTableViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewer.swift; sourceTree = "<group>"; };
 		42C1DCB61E17EAEF00FBC93A /* SuggestionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionsTableViewCell.xib; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			children = (
 				0F7EA30F1D59CCE0000A9362 /* Main.storyboard */,
 				0F7EA3411D59D5AA000A9362 /* MainMenuViewer.swift */,
+				429FBE2C1E339C570087F20E /* LoadingViewController.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				B87737A91E16A70C006495A6 /* SongPickerView.swift in Sources */,
 				429E2BEA1E08A2BF00673574 /* StaminaRankingTableViewer.swift in Sources */,
 				429E2BE61E07476000673574 /* RankingTableViewModel.swift in Sources */,
+				429FBE2D1E339C570087F20E /* LoadingViewController.swift in Sources */,
 				429E2BFC1E0DC34600673574 /* UIFont+AppFont.swift in Sources */,
 				42D1C4E41DFF506A00097770 /* OverallMonthlyRank.swift in Sources */,
 				B87737A31E16676B006495A6 /* SendScoreView.swift in Sources */,

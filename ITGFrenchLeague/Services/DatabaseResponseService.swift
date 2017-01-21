@@ -36,7 +36,7 @@ class DatabaseResponseService {
               
             let databaseArray = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
             
-            print("databaseArray: \(databaseArray)")
+//            print("databaseArray: \(databaseArray)")
             if let JSONArray = databaseArray as? [[String : String]] {
               
               // This call shouldn't exist but since the database is oddly formatted we have to pass through this

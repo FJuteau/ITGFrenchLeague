@@ -145,38 +145,6 @@
             endingLineNumber = "36"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ITGFrenchLeague.SuggestionsTableViewer.tableView (__ObjC.UITableView, cellForRowAt : Foundation.IndexPath) -&gt; __ObjC.UITableViewCell"
-                  moduleName = "ITGFrenchLeague"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lowan/Dev/ITGFrenchLeague/ITGFrenchLeague/Suggestions/SuggestionsTableViewer.swift"
-                  timestampString = "505488212.988884"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ITGFrenchLeague.SuggestionsTableViewer.tableView (__ObjC.UITableView, cellForRowAt : Foundation.IndexPath) -&gt; __ObjC.UITableViewCell"
-                  moduleName = "ITGFrenchLeague"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lowan/Dev/ITGFrenchLeague/ITGFrenchLeague/Suggestions/SuggestionsTableViewer.swift"
-                  timestampString = "505488212.990655"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "300">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

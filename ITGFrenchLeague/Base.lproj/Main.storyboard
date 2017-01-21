@@ -20,17 +20,56 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w7c-hQ-Vkh"/>
+                        <segue destination="Tzg-QS-zzW" kind="relationship" relationship="rootViewController" id="ya8-M4-YyN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bq2-P1-1MV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-798" y="125"/>
+            <point key="canvasLocation" x="-1191" y="125"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="kN0-TG-1mK">
+            <objects>
+                <viewController id="Tzg-QS-zzW" customClass="LoadingViewController" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PA5-zs-9Ta"/>
+                        <viewControllerLayoutGuide type="bottom" id="xNl-xB-Lt6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IDW-kw-d4r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="Utc-VR-rIC">
+                                <rect key="frame" x="0.0" y="114" width="375" height="150"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="n9L-oV-qfM"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZbE-Sa-XO4">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZbE-Sa-XO4" firstAttribute="centerX" secondItem="IDW-kw-d4r" secondAttribute="centerX" id="Zbs-uC-H3A"/>
+                            <constraint firstItem="Utc-VR-rIC" firstAttribute="top" secondItem="PA5-zs-9Ta" secondAttribute="bottom" constant="80" id="hDd-zA-8dg"/>
+                            <constraint firstItem="ZbE-Sa-XO4" firstAttribute="centerY" secondItem="IDW-kw-d4r" secondAttribute="centerY" id="o11-Gw-8om"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vxe-wz-I13"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="ZbE-Sa-XO4" id="9Rr-rX-R82"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="715-Ql-nYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-566" y="247"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainMenuViewer" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuViewer" id="BYZ-38-t0r" customClass="MainMenuViewer" customModule="ITGFrenchLeague" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -40,14 +79,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="Smw-4y-Snf">
-                                <rect key="frame" x="0.0" y="144" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="150"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Auy-3u-SLc"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="83r-Ds-fUr">
-                                <rect key="frame" x="76" y="394" width="223" height="199"/>
+                                <rect key="frame" x="76" y="350" width="223" height="199"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fda-JR-gC9" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="223" height="50"/>
@@ -256,14 +295,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="ky5-eG-SJS">
-                                <rect key="frame" x="0.0" y="144" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="150"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="W9w-ke-8kt"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sGt-jd-v0i">
-                                <rect key="frame" x="76" y="394" width="223" height="99.5"/>
+                                <rect key="frame" x="76" y="350" width="223" height="99.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWu-c3-Ebk" userLabel="Classement du mois" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="223" height="50"/>
@@ -359,7 +398,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soumettre un score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugn-KG-Ngq">
-                                <rect key="frame" x="113" y="84" width="150.5" height="21"/>
+                                <rect key="frame" x="113" y="40" width="150.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="wny-Dr-mMt"/>
                                 </constraints>
@@ -368,26 +407,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre pseudo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSF-c8-sbg">
-                                <rect key="frame" x="137" y="125" width="102.5" height="21"/>
+                                <rect key="frame" x="137" y="81" width="102.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdT-38-Qh2" customClass="CommonTextFieldView" customModule="ITGFrenchLeague" customModuleProvider="target">
-                                <rect key="frame" x="66" y="152" width="243" height="50"/>
+                                <rect key="frame" x="66" y="108" width="243" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CYV-71-p3H"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chanson à soumettre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-sR-UOf">
-                                <rect key="frame" x="105.5" y="222" width="164" height="21"/>
+                                <rect key="frame" x="105.5" y="178" width="164" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jax-21-qqT" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
-                                <rect key="frame" x="66" y="249" width="243" height="50"/>
+                                <rect key="frame" x="66" y="205" width="243" height="50"/>
                                 <state key="normal" title="Sélectionner">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -396,23 +435,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score (optionnel)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-CX-DHf">
-                                <rect key="frame" x="121.5" y="319" width="132" height="21"/>
+                                <rect key="frame" x="121.5" y="275" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhe-Tg-Dsi" customClass="CommonTextFieldView" customModule="ITGFrenchLeague" customModuleProvider="target">
-                                <rect key="frame" x="66" y="346" width="243" height="50"/>
+                                <rect key="frame" x="66" y="302" width="243" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screenshot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-z3-LEP">
-                                <rect key="frame" x="144" y="416" width="87.5" height="21"/>
+                                <rect key="frame" x="144" y="372" width="87.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jov-MM-gCM" customClass="MenuButton" customModule="ITGFrenchLeague" customModuleProvider="target">
-                                <rect key="frame" x="66" y="443" width="243" height="50"/>
+                                <rect key="frame" x="66" y="399" width="243" height="50"/>
                                 <state key="normal" title="Sélectionner">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
