@@ -77,6 +77,7 @@ class SendScoreViewer: UIViewController {
     
     guard let picker = songPickerView else {  return  }
     
+    self.view.endEditing(true)
     self.view.addSubview(picker)
   }
   
@@ -104,6 +105,12 @@ extension SendScoreViewer: UITextFieldDelegate {
     default: break
     }
     updateSubmitButtonAvailability()
+  }
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    
+    textField.resignFirstResponder()
+    return true
   }
 }
 
@@ -165,16 +172,23 @@ extension SendScoreViewer: MFMailComposeViewControllerDelegate {
     let mailComposerVC = MFMailComposeViewController()
     mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
     
-    mailComposerVC.setToRecipients(["nurdin@gmail.com"])
-    mailComposerVC.setSubject("Sending you an in-app e-mail...")
-    mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+    if let pseudoToSubmit = pseudoToSubmit,
+      let songToSubmitTitle = songToSubmitTitle,
+      let screenshotImage = screenshotImage,
+      let screenData = UIImageJPEGRepresentation(screenshotImage, 1) {
+      
+      mailComposerVC.setToRecipients(["necrokiller93@hotmail.com"])
+      mailComposerVC.setSubject("ITG French League - \(pseudoToSubmit) - \(songToSubmitTitle) - \(scoreToSubmit)")
+      mailComposerVC.setMessageBody("\(pseudoToSubmit) - \(songToSubmitTitle) - \(scoreToSubmit)", isHTML: false)
+      mailComposerVC.addAttachmentData(screenData, mimeType: "image/jpeg", fileName: "score")
+    }
     
     return mailComposerVC
   }
   
   func showSendMailErrorAlert() {
-    let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-    sendMailErrorAlert.show()
+//    let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+//    sendMailErrorAlert.show()
   }
   
   // MARK: MFMailComposeViewControllerDelegate
