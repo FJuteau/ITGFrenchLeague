@@ -37,6 +37,7 @@ class ChallengeTableViewCell: UITableViewCell {
     
     songBannerImageView.layer.borderWidth = 0.5
     songBannerImageView.layer.borderColor = UIColor.mainText.cgColor
+    
   }
   
   func configure(with viewModel: ChallengerTableViewCellViewModel) {

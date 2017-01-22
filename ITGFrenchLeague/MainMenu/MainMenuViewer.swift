@@ -24,6 +24,8 @@ class MainMenuViewer: UIViewController {
   
   override func viewDidLoad() {
     
+    self.navigationItem.hidesBackButton = true
+    
     self.monthlyRankingButton.isEnabled = false
     
     DatabaseResponseService.JSONResponse(for: .speedMonthlyRank, genericType: MonthlyRank.self) { result in

@@ -172,7 +172,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dwu-No-dEQ">
-                                            <rect key="frame" x="94" y="8" width="187.5" height="87.5"/>
+                                            <rect key="frame" x="94" y="8" width="188" height="88"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="88" id="kz4-9A-mnh"/>
+                                            </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACs-Xr-r0R">
                                             <rect key="frame" x="296.5" y="55.5" width="40" height="40"/>

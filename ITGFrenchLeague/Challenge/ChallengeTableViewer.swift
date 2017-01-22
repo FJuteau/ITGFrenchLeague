@@ -36,7 +36,7 @@ extension ChallengeTableViewer {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "ChallengerCellID") as? ChallengeTableViewCell{
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "ChallengerCellID") as? ChallengeTableViewCell {
       
       let song = data[indexPath.section][indexPath.row]
       let viewModel = ChallengerTableViewCellViewModel(with: song)
@@ -66,7 +66,11 @@ extension ChallengeTableViewer {
   
   override func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
     
-    return 60
+    return 160
+  }
+  
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 160
   }
   
 }

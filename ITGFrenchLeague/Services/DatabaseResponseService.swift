@@ -31,30 +31,30 @@ class DatabaseResponseService {
         if let data = data {
           do {
             if let resultString = String(data: data, encoding: String.Encoding.utf8) {
-            let JSONString = rightJSONString(string: resultString)
-            let data = JSONString.data(using: String.Encoding.utf8)
+              let JSONString = rightJSONString(string: resultString)
+              let data = JSONString.data(using: String.Encoding.utf8)
+                
+              let databaseArray = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
               
-            let databaseArray = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
-            
-//            print("databaseArray: \(databaseArray)")
-            if let JSONArray = databaseArray as? [[String : String]] {
-              
-              // This call shouldn't exist but since the database is oddly formatted we have to pass through this
-              let formattedJSONArray = tabType.formattedJSONResponse(entryArray: JSONArray)
-              
-              var playerArray: [TabModel] = []
-              for itemDict in formattedJSONArray {
-                if let model = TabModel(withDictionary: itemDict) {
-                  playerArray.append(model)
+  //            print("databaseArray: \(databaseArray)")
+              if let JSONArray = databaseArray as? [[String : String]] {
+                
+                // This call shouldn't exist but since the database is oddly formatted we have to pass through this
+                let formattedJSONArray = tabType.formattedJSONResponse(entryArray: JSONArray)
+                
+                var playerArray: [TabModel] = []
+                for itemDict in formattedJSONArray {
+                  if let model = TabModel(withDictionary: itemDict) {
+                    playerArray.append(model)
+                  }
                 }
+                result(playerArray)
               }
-              result(playerArray)
-            }
-            else
-            {
-              // ERROR HANDLING
-              print("ERROR WHITH THE JSON CONVERSTION")
-            }
+              else
+              {
+                // ERROR HANDLING
+                print("ERROR WHITH THE JSON CONVERSTION")
+              }
             }
           }
           catch {
