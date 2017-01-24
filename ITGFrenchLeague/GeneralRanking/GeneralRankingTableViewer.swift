@@ -15,8 +15,7 @@ class GeneralRankingTableViewer: UITableViewController {
   override func viewDidLoad() {
     
     self.tableView.backgroundColor = UIColor.black
-    /*tabBarController?.tabBar.barTintColor = UIColor.mainColor
-    tabBarController?.tabBar.tintColor = UIColor.mainText*/
+    
   }
 }
 

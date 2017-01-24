@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UITabBar.appearance().shadowImage = UIColor.mainText.as1ptImage()
     UITabBar.appearance().backgroundImage = UIColor.mainColor.as1ptImage()
     
+    UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.clear], for: .normal)
+    UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.clear], for: .highlighted)
     
     return true
   }
