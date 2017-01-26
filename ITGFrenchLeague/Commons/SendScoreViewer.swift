@@ -177,7 +177,7 @@ extension SendScoreViewer: MFMailComposeViewControllerDelegate {
       let screenshotImage = screenshotImage,
       let screenData = UIImageJPEGRepresentation(screenshotImage, 1) {
       
-      mailComposerVC.setToRecipients(["necrokiller93@hotmail.com"])
+      mailComposerVC.setToRecipients(["itgfrenchleague@gmail.com"])
       mailComposerVC.setSubject("ITG French League - \(pseudoToSubmit) - \(songToSubmitTitle) - \(scoreToSubmit)")
       mailComposerVC.setMessageBody("\(pseudoToSubmit) - \(songToSubmitTitle) - \(scoreToSubmit)", isHTML: false)
       mailComposerVC.addAttachmentData(screenData, mimeType: "image/jpeg", fileName: "score")
