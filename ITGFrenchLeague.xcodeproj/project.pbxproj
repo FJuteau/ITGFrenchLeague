@@ -758,7 +758,7 @@
 				DEVELOPMENT_TEAM = LH3NPG2M8S;
 				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itgfrenchleague.appname;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ITGFrenchLeague/ITGFrenchLeague-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -775,7 +775,7 @@
 				DEVELOPMENT_TEAM = LH3NPG2M8S;
 				INFOPLIST_FILE = ITGFrenchLeague/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Fjuteau.ITGFrenchLeague;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itgfrenchleague.appname;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ITGFrenchLeague/ITGFrenchLeague-Bridging-Header.h";
 			};
