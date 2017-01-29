@@ -7,23 +7,25 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Player: TabModelProtocol {
+final class Player: Object, TabModelProtocol {
   
-  var since: String
-  var description: String
-  var name: String
-  var photo: String
+  dynamic var since = ""
+  dynamic var information = ""
+  dynamic var name = ""
+  dynamic var photo = ""
   
-  init?(withDictionary dic:[String:String]) {
+  convenience init?(withDictionary dic:[String:String]) {
     
     guard let since   = dic["Since"],
-      let description = dic["Description"],
+      let information = dic["Description"],
       let name        = dic["Name"],
       let photo       = dic["Photo"] else { return nil }
     
+    self.init()
     self.since        = since
-    self.description  = description
+    self.information  = information
     self.name         = name
     self.photo        = photo
   }

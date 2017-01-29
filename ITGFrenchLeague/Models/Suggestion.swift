@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Suggestion: TabModelProtocol {
+final class Suggestion: Object, TabModelProtocol {
   
-  var playerName: String
-  var songTitle : String
-  var pack      : String
-  var type      : SongType
-  var level     : String
-  var vote      : String
-  var status    : String
+  dynamic var playerName  = ""
+  dynamic var songTitle   = ""
+  dynamic var pack        = ""
+  dynamic var type        = SongType.unknown
+  dynamic var level       = ""
+  dynamic var vote        = ""
+  dynamic var status      = ""
   
-  init?(withDictionary dic:[String:String]) {
+  convenience init?(withDictionary dic:[String:String]) {
     
     guard let playerName  = dic["Player"],
       let songTitle       = dic["Song"],
@@ -29,6 +30,7 @@ struct Suggestion: TabModelProtocol {
       let vote            = dic["Vote"],
       let status          = dic["Status"] else { return nil }
     
+    self.init()
     self.playerName = playerName
     self.songTitle  = songTitle
     self.pack       = pack

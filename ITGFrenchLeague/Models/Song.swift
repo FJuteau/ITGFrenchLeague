@@ -7,17 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Song: TabModelProtocol {
+final class Song: Object, TabModelProtocol {
   
-  var type        : SongType
-  var title       : String
-  var pack        : String
-  var banner      : String
-  var stepArtist  : String
-  var level       : String
+  dynamic var type        = SongType.unknown
+  dynamic var title       = ""
+  dynamic var pack        = ""
+  dynamic var banner      = ""
+  dynamic var stepArtist  = ""
+  dynamic var level       = ""
   
-  init?(withDictionary dic:[String:String]) {
+  convenience init?(withDictionary dic:[String:String]) {
     
     guard let typeString  = dic["type"],
       let type            = SongTypeTool.songType(for: typeString),
@@ -27,6 +28,7 @@ struct Song: TabModelProtocol {
       let stepArtist      = dic["stepArtist"],
       let level           = dic["level"] else { return nil }
     
+    self.init()
     self.type = type
     self.title = title
     self.pack = pack
@@ -34,9 +36,7 @@ struct Song: TabModelProtocol {
     self.stepArtist =  stepArtist
     self.level = level
   }
-  
-  
-  
+
 }
 
 struct SongTypeTool {
@@ -57,12 +57,12 @@ struct SongTypeTool {
 }
 
 
-enum SongType {
+@objc enum SongType: Int {
   
   case speed
   case stamina
   case timing
-  case unkown
+  case unknown
   
   static func songType(forSection section: Int) -> SongType {
     
@@ -77,7 +77,7 @@ enum SongType {
       return timing
       
     default:
-      return unkown
+      return unknown
     }
   }
   
@@ -93,7 +93,7 @@ enum SongType {
     case .timing:
       return 2
       
-    case .unkown:
+    case .unknown:
       return 3
     }
   }
@@ -110,7 +110,7 @@ enum SongType {
     case .timing:
       return "Timing"
       
-    case .unkown:
+    case .unknown:
       return "unkown"
     }
   }

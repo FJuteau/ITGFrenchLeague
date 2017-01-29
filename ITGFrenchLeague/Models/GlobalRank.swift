@@ -8,19 +8,20 @@
 
 import Foundation
 
-struct GlobalRank: TabModelProtocol {
+final class GlobalRank: TabModelProtocol {
   
-  var playerName: String
-  var rank: Int
-  var sum: String
+  dynamic var playerName  = ""
+  dynamic var rank        = 0
+  dynamic var sum         = ""
   
-  init?(withDictionary dic:[String:String]) {
+  convenience init?(withDictionary dic:[String:String]) {
     
     guard let playerName  = dic["Player"],
       let rankString      = dic["Overall Rank"],
       let rank            = Int(rankString),
       let sum             = dic["Sum"] else { return nil }
     
+    self.init()
     self.playerName = playerName
     self.rank       = rank
     self.sum        = sum

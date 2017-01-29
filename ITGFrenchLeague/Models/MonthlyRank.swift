@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct MonthlyRank: TabModelProtocol {
+final class MonthlyRank: TabModelProtocol {
   
-  var playerName  : String
-  var rank        : Int
-  var songTitle   : String
-  var songScore   : String
+  dynamic var playerName  = ""
+  dynamic var rank        = 0
+  dynamic var songTitle   = ""
+  dynamic var songScore   = ""
   
   
-  init?(withDictionary dic:[String:String]) {
+  convenience init?(withDictionary dic:[String:String]) {
     
     guard let playerName  = dic["Player"],
       let rankString      = dic["Rank"],
@@ -24,6 +24,7 @@ struct MonthlyRank: TabModelProtocol {
       let songTitle       = dic["SongTitle"],
       let songScore       = dic["SongScore"] else { return nil }
     
+    self.init()
     self.playerName = playerName
     self.rank       = rank
     self.songTitle  = songTitle
