@@ -14,9 +14,9 @@ struct DataRetainer {
   static var songs              : [Song]?
   static var globalRank         : [GlobalRank]?
   static var overallMonthlyRank : [OverallMonthlyRank]?
-  static var speedMonthlyRank   : [MonthlyRank]?
-  static var staminaMonthlyRank : [MonthlyRank]?
-  static var timingMonthlyRank  : [MonthlyRank]?
+  static var speedMonthlyRank   : [SpeedMonthlyRank]?
+  static var staminaMonthlyRank : [StaminaMonthlyRank]?
+  static var timingMonthlyRank  : [TimingMonthlyRank]?
   static var suggestions        : [Suggestion]?
   
   
@@ -45,31 +45,31 @@ struct DataRetainer {
     return [speedSongs, staminaSongs, timingSongs]
   }
   
-  static var songSortedSpeedRank: [[MonthlyRank]] {
+  static var songSortedSpeedRank: [[SpeedMonthlyRank]] {
     
-    guard let speedMonthlyRank = speedMonthlyRank else { return [[MonthlyRank]]() }
+    guard let speedMonthlyRank = speedMonthlyRank else { return [[SpeedMonthlyRank]]() }
     
     return songSortedMonthlyRank(for: .speed, from: speedMonthlyRank)
   }
   
-  static var songSortedStaminaRank: [[MonthlyRank]] {
+  static var songSortedStaminaRank: [[StaminaMonthlyRank]] {
     
-    guard let staminaMonthlyRank = staminaMonthlyRank else { return [[MonthlyRank]]() }
+    guard let staminaMonthlyRank = staminaMonthlyRank else { return [[StaminaMonthlyRank]]() }
     
     return songSortedMonthlyRank(for: .stamina, from: staminaMonthlyRank)
   }
   
-  static var songSortedTimingRank: [[MonthlyRank]] {
+  static var songSortedTimingRank: [[TimingMonthlyRank]] {
     
-    guard let timingMonthlyRank = timingMonthlyRank else { return [[MonthlyRank]]() }
+    guard let timingMonthlyRank = timingMonthlyRank else { return [[TimingMonthlyRank]]() }
     
     return songSortedMonthlyRank(for: .timing, from: timingMonthlyRank)
   }
   
-  private static func songSortedMonthlyRank(for type: SongType, from monthlyRanks: [MonthlyRank]) -> [[MonthlyRank]] {
+  private static func songSortedMonthlyRank<Rank: MonthlyRank>(for type: SongType, from monthlyRanks: [Rank]) -> [[Rank]] {
     
     let songNames = self.songNames(for: type)
-    var songSortedRank = [[MonthlyRank]]()
+    var songSortedRank = [[Rank]]()
     
     for song in songNames {
       

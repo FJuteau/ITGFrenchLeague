@@ -19,6 +19,9 @@
 		0F7EA3541D5DD37A000A9362 /* TabModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3531D5DD37A000A9362 /* TabModelProtocol.swift */; };
 		0F7EA3581D5E11F0000A9362 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3571D5E11F0000A9362 /* Song.swift */; };
 		0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EA3591D630147000A9362 /* DatabaseFormatService.swift */; };
+		427653551E3EA1EA00E71DB9 /* SpeedMonthlyRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427653541E3EA1EA00E71DB9 /* SpeedMonthlyRank.swift */; };
+		427653571E3EA1FA00E71DB9 /* StaminaMonthlyRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427653561E3EA1FA00E71DB9 /* StaminaMonthlyRank.swift */; };
+		427653591E3EA20500E71DB9 /* TimingMonthlyRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427653581E3EA20500E71DB9 /* TimingMonthlyRank.swift */; };
 		429E2BD81E06D7F700673574 /* GeneralRankingTableViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BD71E06D7F700673574 /* GeneralRankingTableViewer.swift */; };
 		429E2BDA1E06D80500673574 /* GeneralRankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BD91E06D80500673574 /* GeneralRankingTableViewCell.swift */; };
 		429E2BDC1E073D0F00673574 /* GeneralRankingTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E2BDB1E073D0F00673574 /* GeneralRankingTableViewCellViewModel.swift */; };
@@ -97,6 +100,9 @@
 		0F7EA3531D5DD37A000A9362 /* TabModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabModelProtocol.swift; sourceTree = "<group>"; };
 		0F7EA3571D5E11F0000A9362 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		0F7EA3591D630147000A9362 /* DatabaseFormatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFormatService.swift; sourceTree = "<group>"; };
+		427653541E3EA1EA00E71DB9 /* SpeedMonthlyRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedMonthlyRank.swift; sourceTree = "<group>"; };
+		427653561E3EA1FA00E71DB9 /* StaminaMonthlyRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaminaMonthlyRank.swift; sourceTree = "<group>"; };
+		427653581E3EA20500E71DB9 /* TimingMonthlyRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingMonthlyRank.swift; sourceTree = "<group>"; };
 		429E2BD71E06D7F700673574 /* GeneralRankingTableViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRankingTableViewer.swift; sourceTree = "<group>"; };
 		429E2BD91E06D80500673574 /* GeneralRankingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRankingTableViewCell.swift; sourceTree = "<group>"; };
 		429E2BDB1E073D0F00673574 /* GeneralRankingTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRankingTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -303,6 +309,9 @@
 				0F7EA3571D5E11F0000A9362 /* Song.swift */,
 				42D1C4DF1DFEF99B00097770 /* GlobalRank.swift */,
 				42D1C4E11DFF4C8B00097770 /* MonthlyRank.swift */,
+				427653541E3EA1EA00E71DB9 /* SpeedMonthlyRank.swift */,
+				427653561E3EA1FA00E71DB9 /* StaminaMonthlyRank.swift */,
+				427653581E3EA20500E71DB9 /* TimingMonthlyRank.swift */,
 				42D1C4E31DFF506A00097770 /* OverallMonthlyRank.swift */,
 				42C1DCB21E17B78000FBC93A /* Suggestion.swift */,
 			);
@@ -563,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				429E2C031E1044FC00673574 /* ChallengeSectionViewCell.swift in Sources */,
+				427653551E3EA1EA00E71DB9 /* SpeedMonthlyRank.swift in Sources */,
 				B877379F1E1661F0006495A6 /* CommonTextFieldView.swift in Sources */,
 				429E2BDC1E073D0F00673574 /* GeneralRankingTableViewCellViewModel.swift in Sources */,
 				0F7EA34F1D5B69F0000A9362 /* Player.swift in Sources */,
@@ -577,6 +587,7 @@
 				429E2BFC1E0DC34600673574 /* UIFont+AppFont.swift in Sources */,
 				42D1C4E41DFF506A00097770 /* OverallMonthlyRank.swift in Sources */,
 				B87737A31E16676B006495A6 /* SendScoreView.swift in Sources */,
+				427653571E3EA1FA00E71DB9 /* StaminaMonthlyRank.swift in Sources */,
 				429E2BDE1E07466800673574 /* SpeedRankingTableViewer.swift in Sources */,
 				0F7EA34C1D5B65CE000A9362 /* DatabaseResponseService.swift in Sources */,
 				42D1C4EC1E069F5900097770 /* ChallengerTableViewCellViewModel.swift in Sources */,
@@ -585,6 +596,7 @@
 				0F7EA35A1D630147000A9362 /* DatabaseFormatService.swift in Sources */,
 				42C1DCB31E17B78000FBC93A /* Suggestion.swift in Sources */,
 				42D1C4DE1DFC604500097770 /* DataRetainer.swift in Sources */,
+				427653591E3EA20500E71DB9 /* TimingMonthlyRank.swift in Sources */,
 				429E2BF31E0DAEE700673574 /* UIColor+AppColor.swift in Sources */,
 				42D1C4E61E0201E200097770 /* ChallengeTableViewer.swift in Sources */,
 				42D1C4EA1E02054200097770 /* ChallengeTableViewCell.swift in Sources */,

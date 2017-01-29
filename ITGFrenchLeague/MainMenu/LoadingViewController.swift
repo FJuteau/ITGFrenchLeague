@@ -55,6 +55,23 @@ class LoadingViewController: UIViewController {
 //      print("Suggestion : \(result)")
     }
     
+    let realm = try! Realm()
+    
+    if let _ = realm.objects(Player.self).first {
+      
+      let players = realm.objects(Player.self)
+      DataRetainer.players = [String: Player](elements:players.map { ($0.name, $0) })
+      
+      DataRetainer.songs = realm.objects(Song.self).map { $0 }
+      DataRetainer.globalRank = realm.objects(GlobalRank.self).map { $0 }
+      DataRetainer.overallMonthlyRank = realm.objects(OverallMonthlyRank.self).map { $0 }
+      
+      DataRetainer.suggestions = realm.objects(Suggestion.self).map { $0 }
+      
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let controller = storyboard.instantiateViewController(withIdentifier: "MainMenuViewer")
+      self.navigationController?.pushViewController(controller, animated: true)
+    }
     
   }
 

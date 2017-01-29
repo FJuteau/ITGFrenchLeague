@@ -29,29 +29,42 @@ class MainMenuViewer: UIViewController {
     
     self.navigationItem.hidesBackButton = true
     
-    self.monthlyRankingButton.isEnabled = false
+    let realm = try! Realm()
     
-    DatabaseResponseService.JSONResponse(for: .speedMonthlyRank, genericType: MonthlyRank.self) { result in
+    if let _ = realm.objects(SpeedMonthlyRank.self).first {
+      
+      DataRetainer.speedMonthlyRank = realm.objects(SpeedMonthlyRank.self).map { $0 }
+      DataRetainer.staminaMonthlyRank = realm.objects(StaminaMonthlyRank.self).map { $0 }
+      DataRetainer.timingMonthlyRank = realm.objects(TimingMonthlyRank.self).map { $0 }
+      
+    } else {
+      
+      self.monthlyRankingButton.isEnabled = false
+    }
+    
+    DatabaseResponseService.JSONResponse(for: .speedMonthlyRank, genericType: SpeedMonthlyRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
       DataRetainer.speedMonthlyRank = sortedResult
       self.incrementModelIndex()
       //        print("SPEED LOAD : \(sortedResult)")
     }
-    DatabaseResponseService.JSONResponse(for: .staminaMonthlyRank, genericType: MonthlyRank.self) { result in
+    DatabaseResponseService.JSONResponse(for: .staminaMonthlyRank, genericType: StaminaMonthlyRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
       DataRetainer.staminaMonthlyRank = sortedResult
       self.incrementModelIndex()
       //        print("STAMINA LOAD : \(sortedResult)")
     }
-    DatabaseResponseService.JSONResponse(for: .timingMonthlyRank, genericType: MonthlyRank.self) { result in
+    DatabaseResponseService.JSONResponse(for: .timingMonthlyRank, genericType: TimingMonthlyRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
       DataRetainer.timingMonthlyRank = sortedResult
       //        print("TIMING LOAD : \(sortedResult)")
       self.incrementModelIndex()
     }
+    
+    
   }
   
   private func incrementModelIndex() {
