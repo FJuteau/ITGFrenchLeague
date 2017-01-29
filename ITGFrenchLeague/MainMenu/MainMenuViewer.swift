@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class MainMenuViewer: UIViewController {
   
@@ -23,6 +24,8 @@ class MainMenuViewer: UIViewController {
   //MARK: - Life cycle
   
   override func viewDidLoad() {
+    
+     print("realm : \(Realm.Configuration.defaultConfiguration.fileURL!)")
     
     self.navigationItem.hidesBackButton = true
     

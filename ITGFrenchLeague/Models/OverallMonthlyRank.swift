@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-final class OverallMonthlyRank: TabModelProtocol {
+final class OverallMonthlyRank: Object, TabModelProtocol {
   
   dynamic var playerName  = ""
   dynamic var rank        = 0
@@ -35,6 +36,28 @@ final class OverallMonthlyRank: TabModelProtocol {
     self.speedRank    = speedRank
     self.staminaRank  = staminaRank
     self.timingRank   = timingRank
+    
+    
+    DispatchQueue.main.async {
+      let realm = try! Realm()
+      
+      if let overallMonthlyRank = realm.objects(OverallMonthlyRank.self).filter("playerName == \"\(playerName)\"").first {
+        
+        try! realm.write {
+          overallMonthlyRank.playerName   = playerName
+          overallMonthlyRank.rank         = rank
+          overallMonthlyRank.speedRank    = speedRank
+          overallMonthlyRank.staminaRank  = staminaRank
+          overallMonthlyRank.timingRank   = timingRank
+        }
+      } else {
+        
+        try! realm.write {
+          realm.add(self)
+        }
+      }
+    }
+    
   }
   
 }

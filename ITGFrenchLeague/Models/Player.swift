@@ -18,6 +18,7 @@ final class Player: Object, TabModelProtocol {
   
   convenience init?(withDictionary dic:[String:String]) {
     
+    
     guard let since   = dic["Since"],
       let information = dic["Description"],
       let name        = dic["Name"],
@@ -28,6 +29,27 @@ final class Player: Object, TabModelProtocol {
     self.information  = information
     self.name         = name
     self.photo        = photo
+    
+    
+    DispatchQueue.main.async {
+      let realm = try! Realm()
+      
+      if let player = realm.objects(Player.self).filter("name == \"\(name)\"").first {
+        
+        try! realm.write {
+          player.since        = since
+          player.information  = information
+          player.name         = name
+          player.photo        = photo
+        }
+      } else {
+        
+        try! realm.write {
+          realm.add(self)
+        }
+      }
+    }
+    
   }
   
 }

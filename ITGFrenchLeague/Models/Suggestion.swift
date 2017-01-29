@@ -11,10 +11,15 @@ import RealmSwift
 
 final class Suggestion: Object, TabModelProtocol {
   
+  private dynamic var privateType = SongType.unknown.rawValue
+  var type: SongType {
+    get { return SongType(rawValue: privateType)! }
+    set { privateType = newValue.rawValue }
+  }
+  
   dynamic var playerName  = ""
   dynamic var songTitle   = ""
   dynamic var pack        = ""
-  dynamic var type        = SongType.unknown
   dynamic var level       = ""
   dynamic var vote        = ""
   dynamic var status      = ""
@@ -38,6 +43,30 @@ final class Suggestion: Object, TabModelProtocol {
     self.level      = level
     self.vote       = vote
     self.status     = status
+    
+    
+    DispatchQueue.main.async {
+      let realm = try! Realm()
+      
+      if let suggestion = realm.objects(Suggestion.self).filter("playerName == \"\(playerName)\"").first {
+        
+        try! realm.write {
+          suggestion.playerName = playerName
+          suggestion.songTitle  = songTitle
+          suggestion.pack       = pack
+          suggestion.type       = type
+          suggestion.level      = level
+          suggestion.vote       = vote
+          suggestion.status     = status
+        }
+      } else {
+        
+        try! realm.write {
+          realm.add(self)
+        }
+      }
+    }
+    
   }
   
 }

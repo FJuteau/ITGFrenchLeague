@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-final class GlobalRank: TabModelProtocol {
+final class GlobalRank: Object, TabModelProtocol {
   
   dynamic var playerName  = ""
   dynamic var rank        = 0
@@ -25,6 +26,26 @@ final class GlobalRank: TabModelProtocol {
     self.playerName = playerName
     self.rank       = rank
     self.sum        = sum
+    
+    
+    DispatchQueue.main.async {
+      let realm = try! Realm()
+      
+      if let globalRank = realm.objects(GlobalRank.self).filter("playerName == \"\(playerName)\"").first {
+        
+        try! realm.write {
+          globalRank.playerName = playerName
+          globalRank.rank       = rank
+          globalRank.sum        = sum
+        }
+      } else {
+        
+        try! realm.write {
+          realm.add(self)
+        }
+      }
+    }
+    
   }
   
 }

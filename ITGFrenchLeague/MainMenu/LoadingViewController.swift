@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LoadingViewController: UIViewController {
 
@@ -45,8 +46,6 @@ class LoadingViewController: UIViewController {
       let sortedResult = result.sorted { $0.rank < $1.rank }
       DataRetainer.overallMonthlyRank = sortedResult
       self.incrementModelIndex()
-      
-      
 //      print(sortedResult)
     }
     DatabaseResponseService.JSONResponse(for: .suggestions, genericType: Suggestion.self) { result in
@@ -55,6 +54,8 @@ class LoadingViewController: UIViewController {
       self.incrementModelIndex()
 //      print("Suggestion : \(result)")
     }
+    
+    
   }
 
   private func incrementModelIndex() {

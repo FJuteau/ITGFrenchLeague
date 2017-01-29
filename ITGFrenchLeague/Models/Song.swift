@@ -11,7 +11,12 @@ import RealmSwift
 
 final class Song: Object, TabModelProtocol {
   
-  dynamic var type        = SongType.unknown
+  private dynamic var privateType = SongType.unknown.rawValue
+  var type: SongType {
+    get { return SongType(rawValue: privateType)! }
+    set { privateType = newValue.rawValue }
+  }
+  
   dynamic var title       = ""
   dynamic var pack        = ""
   dynamic var banner      = ""
@@ -35,6 +40,28 @@ final class Song: Object, TabModelProtocol {
     self.banner = banner
     self.stepArtist =  stepArtist
     self.level = level
+    
+    
+    DispatchQueue.main.async {
+      let realm = try! Realm()
+      
+      if let song = realm.objects(Song.self).filter("title == \"\(title)\"").first {
+        
+        try! realm.write {
+          song.type = type
+          song.title = title
+          song.pack = pack
+          song.banner = banner
+          song.stepArtist =  stepArtist
+          song.level = level
+        }
+      } else {
+        
+        try! realm.write {
+          realm.add(self)
+        }
+      }
+    }
   }
 
 }
