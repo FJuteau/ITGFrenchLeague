@@ -4,19 +4,26 @@ PODS:
   - Realm/Headers (2.4.1)
   - RealmSwift (2.4.1):
     - Realm (= 2.4.1)
+  - RxCocoa (3.1.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.1.0)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - RealmSwift
+  - RxCocoa
+  - RxSwift
   - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
   Realm: 37a5198a197598d9ec0e4d1ae2f64924c86eeb9a
   RealmSwift: d69e431b79a41acdf14c404b868ae1c2458916e1
+  RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
+  RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: cd110513e183e0422d3fc247185754e43886e277
+PODFILE CHECKSUM: 339403fb8e776b236f4fcd6db4e5da8cc7271cbf
 
 COCOAPODS: 1.1.1

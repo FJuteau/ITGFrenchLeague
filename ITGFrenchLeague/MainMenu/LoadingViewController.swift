@@ -17,6 +17,8 @@ class LoadingViewController: UIViewController {
   
   var numberOfModelToLoad = 5
   
+  var isAlreadyLoaded = false
+  
   override func viewDidLoad() {
     
     super.viewDidLoad()
@@ -68,6 +70,7 @@ class LoadingViewController: UIViewController {
       
       DataRetainer.suggestions = realm.objects(Suggestion.self).map { $0 }
       
+      isAlreadyLoaded = true
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       let controller = storyboard.instantiateViewController(withIdentifier: "MainMenuViewer")
       self.navigationController?.pushViewController(controller, animated: true)
@@ -78,7 +81,7 @@ class LoadingViewController: UIViewController {
   private func incrementModelIndex() {
   
     loadedModelIndex += 1
-    if loadedModelIndex == numberOfModelToLoad - 1 {
+    if !isAlreadyLoaded, loadedModelIndex == numberOfModelToLoad - 1 {
       DispatchQueue.main.async {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "MainMenuViewer")

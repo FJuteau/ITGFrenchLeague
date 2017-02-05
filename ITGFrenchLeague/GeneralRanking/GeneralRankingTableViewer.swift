@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import RxSwift
 
 class GeneralRankingTableViewer: UITableViewController {
   
   let data = DataRetainer.overallMonthlyRank
   
+  //var dataVariable: Variable<[OverallMonthlyRank]?> = Variable(DataRetainer.overallMonthlyRank)
+  
+  var dataObservable: Observable<[OverallMonthlyRank]?>!
+  
+  fileprivate let disposeBag = DisposeBag()
+  
   override func viewDidLoad() {
     
     self.tableView.backgroundColor = UIColor.black
     
+    dataObservable = Observable.just(data)
+      //.observeOn(ConcurrentDispatchQueueScheduler(qos: .userInteractive))
+      .do(onNext: { data in
+        self.tableView.reloadData()
+    })
+    
+    /*dataObservable = dataVariable.asObservable()
+    dataObservable.subscribe(onNext: { data in
+      self.tableView.reloadData()
+    }).addDisposableTo(disposeBag)*/
   }
 }
 
