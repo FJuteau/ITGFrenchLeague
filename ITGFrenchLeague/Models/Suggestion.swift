@@ -7,18 +7,24 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Suggestion: TabModelProtocol {
+final class Suggestion: Object, TabModelProtocol {
   
-  var playerName: String
-  var songTitle : String
-  var pack      : String
-  var type      : SongType
-  var level     : String
-  var vote      : String
-  var status    : String
+  private dynamic var privateType = SongType.unknown.rawValue
+  var type: SongType {
+    get { return SongType(rawValue: privateType)! }
+    set { privateType = newValue.rawValue }
+  }
   
-  init?(withDictionary dic:[String:String]) {
+  dynamic var playerName  = ""
+  dynamic var songTitle   = ""
+  dynamic var pack        = ""
+  dynamic var level       = ""
+  dynamic var vote        = ""
+  dynamic var status      = ""
+  
+  convenience init?(withDictionary dic:[String:String]) {
     
     guard let playerName  = dic["Player"],
       let songTitle       = dic["Song"],
@@ -29,6 +35,7 @@ struct Suggestion: TabModelProtocol {
       let vote            = dic["Vote"],
       let status          = dic["Status"] else { return nil }
     
+    self.init()
     self.playerName = playerName
     self.songTitle  = songTitle
     self.pack       = pack
@@ -36,6 +43,30 @@ struct Suggestion: TabModelProtocol {
     self.level      = level
     self.vote       = vote
     self.status     = status
+    
+    
+    DispatchQueue.main.async {
+      let realm = try! Realm()
+      
+      if let suggestion = realm.objects(Suggestion.self).filter("songTitle == \"\(songTitle)\"").first {
+        
+        try! realm.write {
+          suggestion.playerName = playerName
+          suggestion.songTitle  = songTitle
+          suggestion.pack       = pack
+          suggestion.type       = type
+          suggestion.level      = level
+          suggestion.vote       = vote
+          suggestion.status     = status
+        }
+      } else {
+        
+        try! realm.write {
+          realm.add(self)
+        }
+      }
+    }
+    
   }
   
 }

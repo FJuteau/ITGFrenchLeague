@@ -6,12 +6,26 @@
 //  Copyright © 2016 Fjuteau. All rights reserved.
 //
 import UIKit
+import RxSwift
 
 class StaminaRankingTableViewer: MonthlyRankingTableViewer {
   
-  override var data: [[MonthlyRank]] {
+  var rankObserver: Observable<[StaminaMonthlyRank]>?
+  
+  var disposeBag = DisposeBag()
+  
+  
+  override func viewDidLoad() {
     
-    return DataRetainer.songSortedStaminaRank
+    super.viewDidLoad()
+    
+    rankObserver = DataRetainer.staminaMonthlyRank.asObservable()
+    rankObserver?.subscribe(onNext: { [weak self] songs in
+      
+      self?.data = DataRetainer.songSortedStaminaRank
+      self?.tableView.reloadData()
+    }).addDisposableTo(disposeBag)
+    
   }
 }
 

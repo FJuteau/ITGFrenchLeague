@@ -20,9 +20,9 @@ class SendScoreViewer: UIViewController {
   
   var pickerData: [Song] {
     
-    guard let data = DataRetainer.songs else { return [Song]() }
+    //guard let data = DataRetainer.songs else { return [Song]() }
     
-    return data
+    return DataRetainer.songs.value
   }
   
   
@@ -79,6 +79,9 @@ class SendScoreViewer: UIViewController {
     
     self.view.endEditing(true)
     self.view.addSubview(picker)
+    songToSubmitTitle = pickerData[0].title
+    self.sendScoreView.submitSongButton.setTitle(songToSubmitTitle, for: .normal)
+    self.sendScoreView.submitSongLabel.text = "\(self.sendScoreView.submitSongLabel.text!) 👌"
   }
   
   
@@ -98,9 +101,11 @@ extension SendScoreViewer: UITextFieldDelegate {
     switch textField.tag {
     case SendScoreViewConstants.playerNameTextFieldViewTag:
       pseudoToSubmit = textField.text
+      self.sendScoreView.pseudoLabel.text = "\(self.sendScoreView.pseudoLabel.text!) 👌"
       
     case SendScoreViewConstants.scoreTextFieldViewTag:
       scoreToSubmit = textField.text
+      self.sendScoreView.scoreLabel.text = "\(self.sendScoreView.scoreLabel.text!) 👌"
       
     default: break
     }
@@ -152,6 +157,8 @@ extension SendScoreViewer: UIImagePickerControllerDelegate, UINavigationControll
       
       screenshotImage = image
     }
+    
+    self.sendScoreView.screenshotLabel.text = "\(self.sendScoreView.screenshotLabel.text!) 👌"
     self.dismiss(animated: true, completion: nil)
     updateSubmitButtonAvailability()
   }

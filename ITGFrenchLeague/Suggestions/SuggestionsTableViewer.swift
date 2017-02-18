@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import RxSwift
 
 class SuggestionsTableViewer: UITableViewController {
   
-  let data = DataRetainer.suggestions
+  var data = DataRetainer.suggestions
+  
+  var suggestionObserver: Observable<[Suggestion]>?
+  
+  var disposeBag = DisposeBag()
   
   override func viewDidLoad() {
     
     self.tableView.backgroundColor = UIColor.black
     self.tableView.register(UINib(nibName: "SuggestionsTableViewCell", bundle: nil), forCellReuseIdentifier: "SuggestionsRankingCellID")
+    
+    suggestionObserver = DataRetainer.suggestions.asObservable()
+    suggestionObserver?.subscribe(onNext: { [weak self] songs in
+      
+      self?.data = DataRetainer.suggestions
+      self?.tableView.reloadData()
+    }).addDisposableTo(disposeBag)
   }
 }
 
@@ -25,19 +37,14 @@ extension SuggestionsTableViewer {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    if let data = data {
-      
-      return data.count
-    }
-    return 0
+    return data.value.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "SuggestionsRankingCellID") as? SuggestionsTableViewCell,
-      let data = data {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "SuggestionsRankingCellID") as? SuggestionsTableViewCell {
       
-      let ranking = data[indexPath.row]
+      let ranking = data.value[indexPath.row]
       let viewModel = SuggestionsTableViewModel(with: ranking)
       cell.configure(with: viewModel)
       

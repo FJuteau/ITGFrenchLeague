@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import RxSwift
 
 class GlobalRankingTableViewer: UITableViewController {
   
-  let data = DataRetainer.globalRank
+  var data = DataRetainer.globalRank
+  
+  var rankObserver: Observable<[GlobalRank]>?
+  
+  var disposeBag = DisposeBag()
   
   override func viewDidLoad() {
     
     self.tableView.backgroundColor = UIColor.black
     self.tableView.register(UINib(nibName: "GlobalRankingTableViewCell", bundle: nil), forCellReuseIdentifier: "GlobalRankingCellID")
+    
+    rankObserver = DataRetainer.globalRank.asObservable()
+    rankObserver?.subscribe(onNext: { [weak self] songs in
+      
+      self?.data = DataRetainer.globalRank
+      self?.tableView.reloadData()
+    }).addDisposableTo(disposeBag)
   }
 }
 
@@ -25,19 +37,14 @@ extension GlobalRankingTableViewer {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    if let data = data {
-      
-      return data.count
-    }
-    return 0
+    return data.value.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalRankingCellID") as? GlobalRankingTableViewCell,
-      let data = data {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalRankingCellID") as? GlobalRankingTableViewCell {
       
-      let ranking = data[indexPath.row]
+      let ranking = data.value[indexPath.row]
       let viewModel = GlobalRankingTableViewModel(with: ranking)
       cell.configure(with: viewModel)
       

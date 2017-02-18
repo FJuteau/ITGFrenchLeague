@@ -7,17 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct OverallMonthlyRank: TabModelProtocol {
+final class OverallMonthlyRank: Object, TabModelProtocol {
   
-  var playerName  : String
-  var rank        : Int
-  var speedRank   : Int
-  var staminaRank : Int
-  var timingRank  : Int
+  dynamic var playerName  = ""
+  dynamic var rank        = 0
+  dynamic var speedRank   = 0
+  dynamic var staminaRank = 0
+  dynamic var timingRank  = 0
   
   
-  init?(withDictionary dic:[String:String]) {
+  convenience init?(withDictionary dic:[String:String]) {
     
     guard let playerName        = dic["Player"],
       let rankString            = dic["Overall Rank"],
@@ -29,11 +30,34 @@ struct OverallMonthlyRank: TabModelProtocol {
       let timingRankString      = dic["Timing Rank"],
       let timingRank            = Int(timingRankString) else { return nil }
     
+    self.init()
     self.playerName   = playerName
     self.rank         = rank
     self.speedRank    = speedRank
     self.staminaRank  = staminaRank
     self.timingRank   = timingRank
+    
+    
+    DispatchQueue.main.async {
+      let realm = try! Realm()
+      
+      if let overallMonthlyRank = realm.objects(OverallMonthlyRank.self).filter("playerName == \"\(playerName)\"").first {
+        
+        try! realm.write {
+          overallMonthlyRank.playerName   = playerName
+          overallMonthlyRank.rank         = rank
+          overallMonthlyRank.speedRank    = speedRank
+          overallMonthlyRank.staminaRank  = staminaRank
+          overallMonthlyRank.timingRank   = timingRank
+        }
+      } else {
+        
+        try! realm.write {
+          realm.add(self)
+        }
+      }
+    }
+    
   }
   
 }

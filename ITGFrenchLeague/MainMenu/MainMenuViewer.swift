@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class MainMenuViewer: UIViewController {
   
@@ -24,31 +25,51 @@ class MainMenuViewer: UIViewController {
   
   override func viewDidLoad() {
     
-    self.navigationItem.hidesBackButton = true
+    print("realm : \(Realm.Configuration.defaultConfiguration.fileURL!)")
     
-    self.monthlyRankingButton.isEnabled = false
+    let realm = try! Realm()
     
-    DatabaseResponseService.JSONResponse(for: .speedMonthlyRank, genericType: MonthlyRank.self) { result in
+    if let _ = realm.objects(SpeedMonthlyRank.self).first {
+      
+      DataRetainer.speedMonthlyRank.value = realm.objects(SpeedMonthlyRank.self).map { $0 }
+      DataRetainer.staminaMonthlyRank.value = realm.objects(StaminaMonthlyRank.self).map { $0 }
+      DataRetainer.timingMonthlyRank.value = realm.objects(TimingMonthlyRank.self).map { $0 }
+      
+    } else {
+      
+      self.monthlyRankingButton.isEnabled = false
+    }
+    
+    DatabaseResponseService.JSONResponse(for: .speedMonthlyRank, genericType: SpeedMonthlyRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
-      DataRetainer.speedMonthlyRank = sortedResult
+      DataRetainer.speedMonthlyRank.value = sortedResult
       self.incrementModelIndex()
       //        print("SPEED LOAD : \(sortedResult)")
     }
-    DatabaseResponseService.JSONResponse(for: .staminaMonthlyRank, genericType: MonthlyRank.self) { result in
+    DatabaseResponseService.JSONResponse(for: .staminaMonthlyRank, genericType: StaminaMonthlyRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
-      DataRetainer.staminaMonthlyRank = sortedResult
+      DataRetainer.staminaMonthlyRank.value = sortedResult
       self.incrementModelIndex()
       //        print("STAMINA LOAD : \(sortedResult)")
     }
-    DatabaseResponseService.JSONResponse(for: .timingMonthlyRank, genericType: MonthlyRank.self) { result in
+    DatabaseResponseService.JSONResponse(for: .timingMonthlyRank, genericType: TimingMonthlyRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
-      DataRetainer.timingMonthlyRank = sortedResult
+      DataRetainer.timingMonthlyRank.value = sortedResult
       //        print("TIMING LOAD : \(sortedResult)")
       self.incrementModelIndex()
     }
+    
+    
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    self.navigationItem.hidesBackButton = true
+  }
+  override func viewDidDisappear(_ animated: Bool) {
+    self.navigationItem.hidesBackButton = false
   }
   
   private func incrementModelIndex() {

@@ -7,17 +7,23 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Song: TabModelProtocol {
+final class Song: Object, TabModelProtocol {
   
-  var type        : SongType
-  var title       : String
-  var pack        : String
-  var banner      : String
-  var stepArtist  : String
-  var level       : String
+  private dynamic var privateType = SongType.unknown.rawValue
+  var type: SongType {
+    get { return SongType(rawValue: privateType)! }
+    set { privateType = newValue.rawValue }
+  }
   
-  init?(withDictionary dic:[String:String]) {
+  dynamic var title       = ""
+  dynamic var pack        = ""
+  dynamic var banner      = ""
+  dynamic var stepArtist  = ""
+  dynamic var level       = ""
+  
+  convenience init?(withDictionary dic:[String:String]) {
     
     guard let typeString  = dic["type"],
       let type            = SongTypeTool.songType(for: typeString),
@@ -27,16 +33,38 @@ struct Song: TabModelProtocol {
       let stepArtist      = dic["stepArtist"],
       let level           = dic["level"] else { return nil }
     
+    self.init()
     self.type = type
     self.title = title
     self.pack = pack
     self.banner = banner
     self.stepArtist =  stepArtist
     self.level = level
+    
+    
+    DispatchQueue.main.async {
+      let realm = try! Realm()
+      
+      if let song = realm.objects(Song.self).filter("title == \"\(title)\"").first {
+        
+        try! realm.write {
+          song.type = type
+          song.title = title
+          song.pack = pack
+          song.banner = banner
+          song.stepArtist =  stepArtist
+          song.level = level
+        }
+      } else {
+        
+        try! realm.write {
+          realm.add(self)
+        }
+      }
+    }
+    
   }
-  
-  
-  
+
 }
 
 struct SongTypeTool {
@@ -57,12 +85,12 @@ struct SongTypeTool {
 }
 
 
-enum SongType {
+@objc enum SongType: Int {
   
   case speed
   case stamina
   case timing
-  case unkown
+  case unknown
   
   static func songType(forSection section: Int) -> SongType {
     
@@ -77,7 +105,7 @@ enum SongType {
       return timing
       
     default:
-      return unkown
+      return unknown
     }
   }
   
@@ -93,7 +121,7 @@ enum SongType {
     case .timing:
       return 2
       
-    case .unkown:
+    case .unknown:
       return 3
     }
   }
@@ -110,7 +138,7 @@ enum SongType {
     case .timing:
       return "Timing"
       
-    case .unkown:
+    case .unknown:
       return "unkown"
     }
   }

@@ -7,27 +7,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct MonthlyRank: TabModelProtocol {
+class MonthlyRank: Object {
   
-  var playerName  : String
-  var rank        : Int
-  var songTitle   : String
-  var songScore   : String
+  dynamic var playerName  = ""
+  dynamic var rank        = 0
+  dynamic var songTitle   = ""
+  dynamic var songScore   = ""
   
-  
-  init?(withDictionary dic:[String:String]) {
-    
-    guard let playerName  = dic["Player"],
-      let rankString      = dic["Rank"],
-      let rank            = Int(rankString),
-      let songTitle       = dic["SongTitle"],
-      let songScore       = dic["SongScore"] else { return nil }
-    
-    self.playerName = playerName
-    self.rank       = rank
-    self.songTitle  = songTitle
-    self.songScore  = songScore
-  }
   
 }
