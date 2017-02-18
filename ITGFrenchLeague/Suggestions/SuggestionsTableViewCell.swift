@@ -71,14 +71,19 @@ class SuggestionsTableViewCell: UITableViewCell {
 
   func configure(with viewModel: SuggestionsTableViewModel) {
     
-    songTitleLabel.text        = viewModel.songTitleText
-    packLabel.text  = viewModel.packText
-    proposeNameLabel.text         = viewModel.proposePlayerText
+    songTitleLabel.text       = viewModel.songTitleText
+    packLabel.text            = viewModel.packText
+    proposeNameLabel.text     = viewModel.proposePlayerText
     
-    levelLabel.text = viewModel.levelText
+    levelLabel.text           = viewModel.levelText
+    levelView.layer.borderColor = viewModel.levelColor.cgColor
+    levelLabel.textColor = viewModel.levelColor
+    levelTitleLabel.textColor = viewModel.levelColor
     
-    confirmationLabel.text = viewModel.statusText
+    confirmationLabel.text    = viewModel.statusText
+    confirmationView.layer.borderColor = viewModel.statusColor.cgColor
+    confirmationLabel.textColor = viewModel.statusColor
     
-    likeCountLabel.text = viewModel.likeCountText
+    likeCountLabel.text       = viewModel.likeCountText
   }
 }

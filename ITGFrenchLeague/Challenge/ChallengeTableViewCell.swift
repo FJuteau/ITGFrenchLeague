@@ -43,6 +43,10 @@ class ChallengeTableViewCell: UITableViewCell {
   func configure(with viewModel: ChallengerTableViewCellViewModel) {
     
     levelLabel.text = viewModel.levelText
+    levelLabel.textColor = viewModel.levelColor
+    levelView.layer.borderColor = viewModel.levelColor.cgColor
+    levelTitleLabel.textColor = viewModel.levelColor
+    
     songTitleLabel.text = viewModel.songTitle
     songInfoLabel.text = viewModel.songInfoText
     

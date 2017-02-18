@@ -51,6 +51,14 @@ class GeneralRankingTableViewCell: UITableViewCell {
     staminaRankLabel.text = viewModel.staminaRankingText
     timingRankLabel.text  = viewModel.timingRankingText
     
+    overallRankLabel.textColor        = viewModel.overallRankColor
+    playerNameLabel.textColor         = viewModel.overallRankColor
+    playerImageView.layer.borderColor = viewModel.overallRankColor.cgColor
+    speedRankLabel.textColor          = viewModel.speedRankColor
+    staminaRankLabel.textColor        = viewModel.staminaRankColor
+    timingRankLabel.textColor         = viewModel.timingRankColor
+    
+    
     let iconURL = URL(string: viewModel.playerImageUrl)
     playerImageView.sd_setImage(with: iconURL, completed: { image, error, cacheType, imageURL in
       

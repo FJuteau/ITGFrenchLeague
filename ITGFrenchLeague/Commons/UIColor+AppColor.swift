@@ -31,4 +31,43 @@ extension UIColor {
     UIGraphicsEndImageContext()
     return image!
   }
+  
+  static func ranking(for rank: Int) -> UIColor {
+    
+    switch rank {
+    case 1:
+      return yellow
+    case 2:
+      return white
+    case 3:
+      return orange
+    default:
+      return mainText
+    }
+  }
+  
+  static func status(for status: String) -> UIColor {
+    
+    switch status {
+    case SuggestionStatus.invalidSuggestionStatus.rawValue:
+      return red
+    case SuggestionStatus.validSuggestionStatus.rawValue:
+      return green
+    case SuggestionStatus.waitingSuggestionStatus.rawValue:
+      return mainText
+    default:
+      return mainText
+    }
+  }
+  
+  static func level(for level: Int) -> UIColor {
+    
+    if level < 12 {
+      return mainText
+    } else if level < 15 {
+      return red
+    } else {
+      return blue
+    }
+  }
 }

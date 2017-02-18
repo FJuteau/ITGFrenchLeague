@@ -6,7 +6,7 @@
 //  Copyright © 2016 Fjuteau. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct RankingTableViewModel {
   
@@ -14,6 +14,7 @@ struct RankingTableViewModel {
   var playerImageUrl: String
   var playerNameText: String
   var scoreText: String
+  var rankColor: UIColor
   
   init(with monthlyRank: MonthlyRank) {
     
@@ -21,6 +22,7 @@ struct RankingTableViewModel {
     playerNameText = monthlyRank.playerName
     let songScore = String(Float(monthlyRank.songScore)! * 100)
     scoreText = "\(songScore) %"
+    rankColor = UIColor.ranking(for: monthlyRank.rank)
     
     if let player = DataRetainer.player(forName: playerNameText) {
       

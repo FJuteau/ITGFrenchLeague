@@ -41,6 +41,10 @@ class GlobalRankingTableViewCell: UITableViewCell {
     playerNameLabel.text  = viewModel.playerNameText
     sumLabel.text         = viewModel.sumText
     
+    rankLabel.textColor       = viewModel.rankColor
+    playerNameLabel.textColor = viewModel.rankColor
+    playerImageView.layer.borderColor = viewModel.rankColor.cgColor
+    
     let iconURL = URL(string: viewModel.playerImageUrl)
     playerImageView.sd_setImage(with: iconURL, completed: { image, error, cacheType, imageURL in
       

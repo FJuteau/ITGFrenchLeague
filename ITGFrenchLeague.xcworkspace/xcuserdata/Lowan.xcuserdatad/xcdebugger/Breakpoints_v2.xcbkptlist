@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ITGFrenchLeague/MonthlyRanking/RankingTableViewModel.swift"
-            timestampString = "503881956.892174"
+            timestampString = "509110271.77756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "init(with:)"
             landmarkType = "7">
          </BreakpointContent>

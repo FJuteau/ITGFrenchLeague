@@ -6,7 +6,7 @@
 //  Copyright © 2016 Fjuteau. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct GlobalRankingTableViewModel {
   
@@ -14,12 +14,14 @@ struct GlobalRankingTableViewModel {
   var playerImageUrl: String
   var playerNameText: String
   var sumText: String
+  var rankColor: UIColor
   
   init(with globalRank: GlobalRank) {
     
     rankText = "\(globalRank.rank)."
     playerNameText = globalRank.playerName
     sumText = globalRank.sum
+    rankColor = UIColor.ranking(for: globalRank.rank)
     
     if let player = DataRetainer.player(forName: playerNameText) {
       
