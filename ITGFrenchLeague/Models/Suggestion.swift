@@ -48,7 +48,7 @@ final class Suggestion: Object, TabModelProtocol {
     DispatchQueue.main.async {
       let realm = try! Realm()
       
-      if let suggestion = realm.objects(Suggestion.self).filter("playerName == \"\(playerName)\"").first {
+      if let suggestion = realm.objects(Suggestion.self).filter("songTitle == \"\(songTitle)\"").first {
         
         try! realm.write {
           suggestion.playerName = playerName

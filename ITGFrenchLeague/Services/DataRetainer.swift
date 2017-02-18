@@ -11,23 +11,23 @@ import RxSwift
 
 struct DataRetainer {
   
-  static var players            : [String: Player]?
-  static var songs              : [Song]?
-  static var globalRank         : [GlobalRank]?
-  static var overallMonthlyRank : [OverallMonthlyRank]?
-  static var speedMonthlyRank   : [SpeedMonthlyRank]?
-  static var staminaMonthlyRank : [StaminaMonthlyRank]?
-  static var timingMonthlyRank  : [TimingMonthlyRank]?
-  static var suggestions        : [Suggestion]?
+  static var players            = Variable<[String: Player]>([String: Player]())
+  static var songs              = Variable<[Song]>([Song]())
+  static var globalRank         = Variable<[GlobalRank]>([GlobalRank]())
+  static var overallMonthlyRank = Variable<[OverallMonthlyRank]>([OverallMonthlyRank]())
+  static var speedMonthlyRank   = Variable<[SpeedMonthlyRank]>([SpeedMonthlyRank]())
+  static var staminaMonthlyRank = Variable<[StaminaMonthlyRank]>([StaminaMonthlyRank]())
+  static var timingMonthlyRank  = Variable<[TimingMonthlyRank]>([TimingMonthlyRank]())
+  static var suggestions        = Variable<[Suggestion]>([Suggestion]())
   
   
   static func songs(of type: SongType) -> [Song] {
     
-    if let songs = songs {
+    //if let songs = songs {
       
-      return songs.filter { $0.type == type }
-    }
-    return [Song]()
+      return songs.value.filter { $0.type == type }
+    //}
+    //return [Song]()
   }
   
   static func songNames(for type: SongType) -> [String] {
@@ -48,23 +48,23 @@ struct DataRetainer {
   
   static var songSortedSpeedRank: [[SpeedMonthlyRank]] {
     
-    guard let speedMonthlyRank = speedMonthlyRank else { return [[SpeedMonthlyRank]]() }
+    //guard let speedMonthlyRank = speedMonthlyRank else { return [[SpeedMonthlyRank]]() }
     
-    return songSortedMonthlyRank(for: .speed, from: speedMonthlyRank)
+    return songSortedMonthlyRank(for: .speed, from: speedMonthlyRank.value)
   }
   
   static var songSortedStaminaRank: [[StaminaMonthlyRank]] {
     
-    guard let staminaMonthlyRank = staminaMonthlyRank else { return [[StaminaMonthlyRank]]() }
+    //guard let staminaMonthlyRank = staminaMonthlyRank else { return [[StaminaMonthlyRank]]() }
     
-    return songSortedMonthlyRank(for: .stamina, from: staminaMonthlyRank)
+    return songSortedMonthlyRank(for: .stamina, from: staminaMonthlyRank.value)
   }
   
   static var songSortedTimingRank: [[TimingMonthlyRank]] {
     
-    guard let timingMonthlyRank = timingMonthlyRank else { return [[TimingMonthlyRank]]() }
+    //guard let timingMonthlyRank = timingMonthlyRank else { return [[TimingMonthlyRank]]() }
     
-    return songSortedMonthlyRank(for: .timing, from: timingMonthlyRank)
+    return songSortedMonthlyRank(for: .timing, from: timingMonthlyRank.value)
   }
   
   private static func songSortedMonthlyRank<Rank: MonthlyRank>(for type: SongType, from monthlyRanks: [Rank]) -> [[Rank]] {
@@ -83,6 +83,6 @@ struct DataRetainer {
   
   static func player(forName name: String) -> Player? {
     
-    return players?[name]
+    return players.value[name]
   }
 }

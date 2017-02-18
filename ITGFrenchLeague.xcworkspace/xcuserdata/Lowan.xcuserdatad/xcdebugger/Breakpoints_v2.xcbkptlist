@@ -9,22 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ITGFrenchLeague/Services/DatabaseResponseService.swift"
-            timestampString = "503167072.394305"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "JSONResponse(for:genericType:result:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ITGFrenchLeague/Models/PlayerModel.swift"
             timestampString = "503080169.371907"
             startingColumnNumber = "9223372036854775807"
@@ -42,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ITGFrenchLeague/Services/DatabaseFormatService.swift"
-            timestampString = "504872221.306865"
+            timestampString = "509103774.005152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "TabType"
             landmarkType = "13">
          </BreakpointContent>
@@ -58,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ITGFrenchLeague/Services/DatabaseFormatService.swift"
-            timestampString = "504872221.306865"
+            timestampString = "509103774.005152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "formattedSongInfo(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,28 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ITGFrenchLeague/Challenge/ChallengeTableViewer.swift"
-            timestampString = "507165986.342656"
+            timestampString = "509100555.066668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ITGFrenchLeague/Challenge/ChallengeTableViewer.swift"
-            timestampString = "507165986.342656"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -144,15 +112,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ITGFrenchLeague/MainMenu/LoadingViewController.swift"
-            timestampString = "507974194.202022"
+            timestampString = "508499648.501075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -163,12 +131,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ITGFrenchLeague/GeneralRanking/GeneralRankingTableViewer.swift"
-            timestampString = "507976058.174878"
+            filePath = "ITGFrenchLeague/Challenge/ChallengeTableViewer.swift"
+            timestampString = "509100555.066668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -179,14 +147,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ITGFrenchLeague/GeneralRanking/GeneralRankingTableViewer.swift"
-            timestampString = "507975743.440971"
+            filePath = "ITGFrenchLeague/Services/DatabaseFormatService.swift"
+            timestampString = "509103774.005152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "deleteRealmPreviousObjects()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ITGFrenchLeague.TabType.deleteRealmPreviousObjects () -&gt; ()"
+                  moduleName = "ITGFrenchLeague"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lowan/Dev/ITGFrenchLeague/ITGFrenchLeague/Services/DatabaseFormatService.swift"
+                  timestampString = "509103060.789208"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ITGFrenchLeague.TabType.(deleteRealmPreviousObjects () -&gt; ()).(closure #1)"
+                  moduleName = "ITGFrenchLeague"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lowan/Dev/ITGFrenchLeague/ITGFrenchLeague/Services/DatabaseFormatService.swift"
+                  timestampString = "509103060.790422"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ITGFrenchLeague/Models/Player.swift"
+            timestampString = "509102976.776658"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "init(withDictionary:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ITGFrenchLeague.Player.init (withDictionary : Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; Swift.Optional&lt;ITGFrenchLeague.Player&gt;"
+                  moduleName = "ITGFrenchLeague"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lowan/Dev/ITGFrenchLeague/ITGFrenchLeague/Models/Player.swift"
+                  timestampString = "509103060.792884"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1620">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ITGFrenchLeague.Player.(init (withDictionary : Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; Swift.Optional&lt;ITGFrenchLeague.Player&gt;).(closure #1)"
+                  moduleName = "ITGFrenchLeague"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lowan/Dev/ITGFrenchLeague/ITGFrenchLeague/Models/Player.swift"
+                  timestampString = "509103060.794164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "117">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

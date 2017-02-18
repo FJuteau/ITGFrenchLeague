@@ -8,14 +8,27 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class ChallengeTableViewer: UITableViewController {
   
-  let data = DataRetainer.typeSortedSongs
+  var data = DataRetainer.typeSortedSongs
+  
+  var songObserver: Observable<[Song]>?
+  
+  var disposeBag = DisposeBag()
   
   override func viewDidLoad() {
     
     self.tableView.backgroundColor = UIColor.black
+    
+    songObserver = DataRetainer.songs.asObservable()
+    songObserver?.subscribe(onNext: { [weak self] songs in
+      
+      self?.data = DataRetainer.typeSortedSongs
+      self?.tableView.reloadData()
+    }).addDisposableTo(disposeBag)
+    
   }
 }
 

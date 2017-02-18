@@ -20,9 +20,9 @@ class SendScoreViewer: UIViewController {
   
   var pickerData: [Song] {
     
-    guard let data = DataRetainer.songs else { return [Song]() }
+    //guard let data = DataRetainer.songs else { return [Song]() }
     
-    return data
+    return DataRetainer.songs.value
   }
   
   

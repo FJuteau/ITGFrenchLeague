@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class MonthlyRankingTableViewer: UITableViewController {
   
-  var data: [[MonthlyRank]] {
-    
-    return DataRetainer.songSortedSpeedRank
-  }
+  var data: [[MonthlyRank]] = DataRetainer.songSortedSpeedRank
+
   
   override func viewDidLoad() {
     

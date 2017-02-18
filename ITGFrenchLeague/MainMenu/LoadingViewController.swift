@@ -28,31 +28,31 @@ class LoadingViewController: UIViewController {
     DatabaseResponseService.JSONResponse(for: .players, genericType: Player.self) { result in
       
       let players = [String: Player](elements:result.map { ($0.name, $0) })
-      DataRetainer.players = players
+      DataRetainer.players.value = players
       self.incrementModelIndex()
     }
     DatabaseResponseService.JSONResponse(for: .songInfo, genericType: Song.self) { result in
       
-      DataRetainer.songs = result
+      DataRetainer.songs.value = result
       self.incrementModelIndex()
 //      print(result)
     }
     DatabaseResponseService.JSONResponse(for: .globalRank, genericType: GlobalRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
-      DataRetainer.globalRank = sortedResult
+      DataRetainer.globalRank.value = sortedResult
 //      print(sortedResult)
     }
     DatabaseResponseService.JSONResponse(for: .overallMonthlyRank, genericType: OverallMonthlyRank.self) { result in
       
       let sortedResult = result.sorted { $0.rank < $1.rank }
-      DataRetainer.overallMonthlyRank = sortedResult
+      DataRetainer.overallMonthlyRank.value = sortedResult
       self.incrementModelIndex()
 //      print(sortedResult)
     }
     DatabaseResponseService.JSONResponse(for: .suggestions, genericType: Suggestion.self) { result in
       
-      DataRetainer.suggestions = result
+      DataRetainer.suggestions.value = result
       self.incrementModelIndex()
 //      print("Suggestion : \(result)")
     }
@@ -62,13 +62,13 @@ class LoadingViewController: UIViewController {
     if let _ = realm.objects(Player.self).first {
       
       let players = realm.objects(Player.self)
-      DataRetainer.players = [String: Player](elements:players.map { ($0.name, $0) })
+      DataRetainer.players.value            = [String: Player](elements:players.map { ($0.name, $0) })
       
-      DataRetainer.songs = realm.objects(Song.self).map { $0 }
-      DataRetainer.globalRank = realm.objects(GlobalRank.self).map { $0 }
-      DataRetainer.overallMonthlyRank = realm.objects(OverallMonthlyRank.self).map { $0 }
+      DataRetainer.songs.value              = realm.objects(Song.self).map { $0 }
+      DataRetainer.globalRank.value         = realm.objects(GlobalRank.self).map { $0 }
+      DataRetainer.overallMonthlyRank.value = realm.objects(OverallMonthlyRank.self).map { $0 }
       
-      DataRetainer.suggestions = realm.objects(Suggestion.self).map { $0 }
+      DataRetainer.suggestions.value        = realm.objects(Suggestion.self).map { $0 }
       
       isAlreadyLoaded = true
       let storyboard = UIStoryboard(name: "Main", bundle: nil)

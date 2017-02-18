@@ -11,28 +11,22 @@ import RxSwift
 
 class GeneralRankingTableViewer: UITableViewController {
   
-  let data = DataRetainer.overallMonthlyRank
+  var data = DataRetainer.overallMonthlyRank
   
-  //var dataVariable: Variable<[OverallMonthlyRank]?> = Variable(DataRetainer.overallMonthlyRank)
+  var rankObserver: Observable<[OverallMonthlyRank]>?
   
-  var dataObservable: Observable<[OverallMonthlyRank]?>!
-  
-  fileprivate let disposeBag = DisposeBag()
+  var disposeBag = DisposeBag()
   
   override func viewDidLoad() {
     
     self.tableView.backgroundColor = UIColor.black
     
-    dataObservable = Observable.just(data)
-      //.observeOn(ConcurrentDispatchQueueScheduler(qos: .userInteractive))
-      .do(onNext: { data in
-        self.tableView.reloadData()
-    })
-    
-    /*dataObservable = dataVariable.asObservable()
-    dataObservable.subscribe(onNext: { data in
-      self.tableView.reloadData()
-    }).addDisposableTo(disposeBag)*/
+    rankObserver = DataRetainer.overallMonthlyRank.asObservable()
+    rankObserver?.subscribe(onNext: { [weak self] songs in
+      
+      self?.data = DataRetainer.overallMonthlyRank
+      self?.tableView.reloadData()
+    }).addDisposableTo(disposeBag)
   }
 }
 
@@ -42,19 +36,14 @@ extension GeneralRankingTableViewer {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    if let data = data {
-      
-      return data.count
-    }
-    return 0
+    return data.value.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRankingCellID") as? GeneralRankingTableViewCell,
-      let data = data {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRankingCellID") as? GeneralRankingTableViewCell {
       
-      let ranking = data[indexPath.row]
+      let ranking = data.value[indexPath.row]
       let viewModel = GeneralRankingTableViewCellViewModel(with: ranking)
       cell.configure(with: viewModel)
       

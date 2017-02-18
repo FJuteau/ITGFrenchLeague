@@ -28,6 +28,8 @@ class DatabaseResponseService {
       
       let dataTask = self.urlSession.dataTask(with: url) { (data, response, error) in
         
+        tabType.deleteRealmPreviousObjects()
+        
         DispatchQueue.main.async {
           if let data = data {
             do {

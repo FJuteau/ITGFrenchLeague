@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import RxSwift
 
 class SpeedRankingTableViewer: MonthlyRankingTableViewer {
- 
-  override var data: [[MonthlyRank]] {
-    
-    return DataRetainer.songSortedSpeedRank
-  }
   
+  var rankObserver: Observable<[SpeedMonthlyRank]>?
+  
+  var disposeBag = DisposeBag()
+  
+  
+  override func viewDidLoad() {
+    
+    super.viewDidLoad()
+    
+    rankObserver = DataRetainer.speedMonthlyRank.asObservable()
+    rankObserver?.subscribe(onNext: { [weak self] songs in
+      
+      self?.data = DataRetainer.songSortedSpeedRank
+      self?.tableView.reloadData()
+    }).addDisposableTo(disposeBag)
+    
+  }
 }
 
 // MARK : Table View Delegate

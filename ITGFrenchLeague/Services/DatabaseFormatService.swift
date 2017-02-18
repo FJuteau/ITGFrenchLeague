@@ -14,6 +14,7 @@
  */
 
 import Foundation
+import RealmSwift
 
 enum TabType {
   
@@ -48,6 +49,36 @@ enum TabType {
       
     case .suggestions:
       return "Suggestions"
+    }
+  }
+  
+  func model() -> Object.Type {
+    
+    switch self {
+      
+    case .players:
+      return Player.self
+      
+    case .songInfo:
+      return Song.self
+      
+    case .globalRank:
+      return GlobalRank.self
+      
+    case .overallMonthlyRank:
+      return OverallMonthlyRank.self
+        
+    case .speedMonthlyRank:
+      return SpeedMonthlyRank.self
+        
+    case .staminaMonthlyRank:
+      return StaminaMonthlyRank.self
+        
+    case .timingMonthlyRank:
+      return TimingMonthlyRank.self
+      
+    case .suggestions:
+      return Suggestion.self
     }
   }
   
@@ -205,6 +236,20 @@ enum TabType {
     let mappedArray = ["Player": playerName, "Rank": rank, "SongTitle": songTitle, "SongScore": songScore]
     
     return mappedArray
+  }
+  
+  func deleteRealmPreviousObjects() {
+    
+    if self == .songInfo,
+      self == .suggestions {
+      let realm = try! Realm()
+      
+      let toDelete = realm.objects(self.model())
+      
+      try! realm.write {
+        realm.delete(toDelete)
+      }
+    }
   }
 }
 
